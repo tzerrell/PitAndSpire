@@ -59,7 +59,7 @@ FFLAGS=
 ASFLAGS=
 
 # Link Libraries and Options
-LDLIBSOPTIONS=-lfltk.dll -lX11.dll -lXext.dll -lm -lws2_32
+LDLIBSOPTIONS=-lfltk.dll -lX11.dll -lXext.dll -lm
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
@@ -67,47 +67,47 @@ LDLIBSOPTIONS=-lfltk.dll -lX11.dll -lXext.dll -lm -lws2_32
 
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/lerron.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/lerron ${OBJECTFILES} ${LDLIBSOPTIONS} -l/c/cygwin64/lib/w32api/ws2_32
+	x86_64-w64-mingw32-ld -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/lerron ${OBJECTFILES} ${LDLIBSOPTIONS}
 
 ${OBJECTDIR}/dungeon.o: nbproject/Makefile-${CND_CONF}.mk dungeon.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I\;../build/include -I../../../../../cygwin64/usr/include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/dungeon.o dungeon.cpp
+	$(COMPILE.cc) -g -I\;../build/include -I/cygdrive/C/cygwin64/usr/include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/dungeon.o dungeon.cpp
 
 ${OBJECTDIR}/gang.o: nbproject/Makefile-${CND_CONF}.mk gang.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I\;../build/include -I../../../../../cygwin64/usr/include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/gang.o gang.cpp
+	$(COMPILE.cc) -g -I\;../build/include -I/cygdrive/C/cygwin64/usr/include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/gang.o gang.cpp
 
 ${OBJECTDIR}/inventory.o: nbproject/Makefile-${CND_CONF}.mk inventory.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I\;../build/include -I../../../../../cygwin64/usr/include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/inventory.o inventory.cpp
+	$(COMPILE.cc) -g -I\;../build/include -I/cygdrive/C/cygwin64/usr/include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/inventory.o inventory.cpp
 
 ${OBJECTDIR}/item.o: nbproject/Makefile-${CND_CONF}.mk item.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I\;../build/include -I../../../../../cygwin64/usr/include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/item.o item.cpp
+	$(COMPILE.cc) -g -I\;../build/include -I/cygdrive/C/cygwin64/usr/include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/item.o item.cpp
 
 ${OBJECTDIR}/main.o: nbproject/Makefile-${CND_CONF}.mk main.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I\;../build/include -I../../../../../cygwin64/usr/include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
+	$(COMPILE.cc) -g -I\;../build/include -I/cygdrive/C/cygwin64/usr/include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
 
 ${OBJECTDIR}/monster.o: nbproject/Makefile-${CND_CONF}.mk monster.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I\;../build/include -I../../../../../cygwin64/usr/include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/monster.o monster.cpp
+	$(COMPILE.cc) -g -I\;../build/include -I/cygdrive/C/cygwin64/usr/include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/monster.o monster.cpp
 
 ${OBJECTDIR}/room.o: nbproject/Makefile-${CND_CONF}.mk room.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I\;../build/include -I../../../../../cygwin64/usr/include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/room.o room.cpp
+	$(COMPILE.cc) -g -I\;../build/include -I/cygdrive/C/cygwin64/usr/include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/room.o room.cpp
 
 ${OBJECTDIR}/tile.o: nbproject/Makefile-${CND_CONF}.mk tile.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I\;../build/include -I../../../../../cygwin64/usr/include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/tile.o tile.cpp
+	$(COMPILE.cc) -g -I\;../build/include -I/cygdrive/C/cygwin64/usr/include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/tile.o tile.cpp
 
 # Subprojects
 .build-subprojects:
