@@ -14,14 +14,14 @@ GREP=grep
 NM=nm
 CCADMIN=CCadmin
 RANLIB=ranlib
-CC=gcc
-CCC=g++
-CXX=g++
+CC=x86_64-w64-mingw32-gcc
+CCC=x86_64-w64-mingw32-g++
+CXX=x86_64-w64-mingw32-g++
 FC=gfortran
 AS=as
 
 # Macros
-CND_PLATFORM=Cygwin_4.x-Windows
+CND_PLATFORM=Cygwin-Windows
 CND_DLIB_EXT=dll
 CND_CONF=Debug
 CND_DISTDIR=dist
@@ -49,8 +49,8 @@ OBJECTFILES= \
 CFLAGS=
 
 # CC Compiler Flags
-CCFLAGS=
-CXXFLAGS=
+CCFLAGS=-I/usr/include/freetype2 -ggdb -O2 -pipe -fdebug-prefix-map=/usr/src/ports/fltk/fltk-1.3.3-1.x86_64/build=/usr/src/debug/fltk-1.3.3-1 -fdebug-prefix-map=/usr/src/ports/fltk/fltk-1.3.3-1.x86_64/src/fltk-1.3.3=/usr/src/debug/fltk-1.3.3-1 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_THREAD_SAFE -D_REENTRANT
+CXXFLAGS=-I/usr/include/freetype2 -ggdb -O2 -pipe -fdebug-prefix-map=/usr/src/ports/fltk/fltk-1.3.3-1.x86_64/build=/usr/src/debug/fltk-1.3.3-1 -fdebug-prefix-map=/usr/src/ports/fltk/fltk-1.3.3-1.x86_64/src/fltk-1.3.3=/usr/src/debug/fltk-1.3.3-1 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_THREAD_SAFE -D_REENTRANT
 
 # Fortran Compiler Flags
 FFLAGS=
@@ -59,7 +59,7 @@ FFLAGS=
 ASFLAGS=
 
 # Link Libraries and Options
-LDLIBSOPTIONS=
+LDLIBSOPTIONS=-lfltk.dll -lX11.dll -lXext.dll -lm -lws2_32
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
@@ -67,47 +67,47 @@ LDLIBSOPTIONS=
 
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/lerron.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/lerron ${OBJECTFILES} ${LDLIBSOPTIONS}
+	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/lerron ${OBJECTFILES} ${LDLIBSOPTIONS} -l/c/cygwin64/lib/w32api/ws2_32
 
-${OBJECTDIR}/dungeon.o: dungeon.cpp 
+${OBJECTDIR}/dungeon.o: nbproject/Makefile-${CND_CONF}.mk dungeon.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I\;../build/include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/dungeon.o dungeon.cpp
+	$(COMPILE.cc) -g -I\;../build/include -I../../../../../cygwin64/usr/include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/dungeon.o dungeon.cpp
 
-${OBJECTDIR}/gang.o: gang.cpp 
+${OBJECTDIR}/gang.o: nbproject/Makefile-${CND_CONF}.mk gang.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I\;../build/include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/gang.o gang.cpp
+	$(COMPILE.cc) -g -I\;../build/include -I../../../../../cygwin64/usr/include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/gang.o gang.cpp
 
-${OBJECTDIR}/inventory.o: inventory.cpp 
+${OBJECTDIR}/inventory.o: nbproject/Makefile-${CND_CONF}.mk inventory.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I\;../build/include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/inventory.o inventory.cpp
+	$(COMPILE.cc) -g -I\;../build/include -I../../../../../cygwin64/usr/include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/inventory.o inventory.cpp
 
-${OBJECTDIR}/item.o: item.cpp 
+${OBJECTDIR}/item.o: nbproject/Makefile-${CND_CONF}.mk item.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I\;../build/include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/item.o item.cpp
+	$(COMPILE.cc) -g -I\;../build/include -I../../../../../cygwin64/usr/include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/item.o item.cpp
 
-${OBJECTDIR}/main.o: main.cpp 
+${OBJECTDIR}/main.o: nbproject/Makefile-${CND_CONF}.mk main.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I\;../build/include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
+	$(COMPILE.cc) -g -I\;../build/include -I../../../../../cygwin64/usr/include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
 
-${OBJECTDIR}/monster.o: monster.cpp 
+${OBJECTDIR}/monster.o: nbproject/Makefile-${CND_CONF}.mk monster.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I\;../build/include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/monster.o monster.cpp
+	$(COMPILE.cc) -g -I\;../build/include -I../../../../../cygwin64/usr/include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/monster.o monster.cpp
 
-${OBJECTDIR}/room.o: room.cpp 
+${OBJECTDIR}/room.o: nbproject/Makefile-${CND_CONF}.mk room.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I\;../build/include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/room.o room.cpp
+	$(COMPILE.cc) -g -I\;../build/include -I../../../../../cygwin64/usr/include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/room.o room.cpp
 
-${OBJECTDIR}/tile.o: tile.cpp 
+${OBJECTDIR}/tile.o: nbproject/Makefile-${CND_CONF}.mk tile.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I\;../build/include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/tile.o tile.cpp
+	$(COMPILE.cc) -g -I\;../build/include -I../../../../../cygwin64/usr/include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/tile.o tile.cpp
 
 # Subprojects
 .build-subprojects:

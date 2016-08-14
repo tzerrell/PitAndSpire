@@ -88,6 +88,7 @@ all: .all-post
 
 .all-post: .all-impl
 # Add your post 'all' code here...
+	-l/c/cygwin64/lib/w32api/ws2_32
 
 
 # build tests
