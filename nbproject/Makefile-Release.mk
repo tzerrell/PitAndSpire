@@ -35,6 +35,11 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+	${OBJECTDIR}/_ext/ac8653fe/creature.o \
+	${OBJECTDIR}/_ext/ac8653fe/party.o \
+	${OBJECTDIR}/_ext/ac8653fe/playerCharacter.o \
+	${OBJECTDIR}/_ext/ac8653fe/random.o \
+	${OBJECTDIR}/_ext/ac8653fe/thePit.o \
 	${OBJECTDIR}/dungeon.o \
 	${OBJECTDIR}/gang.o \
 	${OBJECTDIR}/inventory.o \
@@ -68,6 +73,31 @@ LDLIBSOPTIONS=
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/lerron.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/lerron ${OBJECTFILES} ${LDLIBSOPTIONS}
+
+${OBJECTDIR}/_ext/ac8653fe/creature.o: /cygdrive/C/Users/tnc02_000/Documents/NetBeansProjects/Lerron/creature.cpp 
+	${MKDIR} -p ${OBJECTDIR}/_ext/ac8653fe
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/ac8653fe/creature.o /cygdrive/C/Users/tnc02_000/Documents/NetBeansProjects/Lerron/creature.cpp
+
+${OBJECTDIR}/_ext/ac8653fe/party.o: /cygdrive/C/Users/tnc02_000/Documents/NetBeansProjects/Lerron/party.cpp 
+	${MKDIR} -p ${OBJECTDIR}/_ext/ac8653fe
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/ac8653fe/party.o /cygdrive/C/Users/tnc02_000/Documents/NetBeansProjects/Lerron/party.cpp
+
+${OBJECTDIR}/_ext/ac8653fe/playerCharacter.o: /cygdrive/C/Users/tnc02_000/Documents/NetBeansProjects/Lerron/playerCharacter.cpp 
+	${MKDIR} -p ${OBJECTDIR}/_ext/ac8653fe
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/ac8653fe/playerCharacter.o /cygdrive/C/Users/tnc02_000/Documents/NetBeansProjects/Lerron/playerCharacter.cpp
+
+${OBJECTDIR}/_ext/ac8653fe/random.o: /cygdrive/C/Users/tnc02_000/Documents/NetBeansProjects/Lerron/random.cpp 
+	${MKDIR} -p ${OBJECTDIR}/_ext/ac8653fe
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/ac8653fe/random.o /cygdrive/C/Users/tnc02_000/Documents/NetBeansProjects/Lerron/random.cpp
+
+${OBJECTDIR}/_ext/ac8653fe/thePit.o: /cygdrive/C/Users/tnc02_000/Documents/NetBeansProjects/Lerron/thePit.cpp 
+	${MKDIR} -p ${OBJECTDIR}/_ext/ac8653fe
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/ac8653fe/thePit.o /cygdrive/C/Users/tnc02_000/Documents/NetBeansProjects/Lerron/thePit.cpp
 
 ${OBJECTDIR}/dungeon.o: dungeon.cpp 
 	${MKDIR} -p ${OBJECTDIR}

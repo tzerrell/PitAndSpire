@@ -8,6 +8,8 @@
 #ifndef DUNGEON_H
 #define	DUNGEON_H
 
+#include <cstddef>
+#include <cstdlib>
 #include <vector>
 #include "class-declarations.h"
 
@@ -17,9 +19,10 @@ public:
     dungeon(const dungeon& orig);
     virtual ~dungeon();
 private:
-    unsigned short length;
-    unsigned short width;
-    unsigned short height;
+    std::size_t length;
+    std::size_t width;
+    std::size_t height;
+    
     std::vector<tile*> tiles;
 };
 

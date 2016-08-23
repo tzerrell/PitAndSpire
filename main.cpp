@@ -7,6 +7,7 @@
 
 
 #include <cstdlib>
+#define WIN32
 #include <FL/Enumerations.H>
 #include <FL/Fl.H>
 #include <FL/Fl_Window.H>

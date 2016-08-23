@@ -4,13 +4,19 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <itemPath>C:/Users/tnc02_000/Documents/NetBeansProjects/Lerron/attack_types.h</itemPath>
       <itemPath>class-declarations.h</itemPath>
+      <itemPath>C:/Users/tnc02_000/Documents/NetBeansProjects/Lerron/creature.h</itemPath>
       <itemPath>dungeon.h</itemPath>
       <itemPath>gang.h</itemPath>
       <itemPath>inventory.h</itemPath>
       <itemPath>item.h</itemPath>
       <itemPath>monster.h</itemPath>
+      <itemPath>C:/Users/tnc02_000/Documents/NetBeansProjects/Lerron/party.h</itemPath>
+      <itemPath>C:/Users/tnc02_000/Documents/NetBeansProjects/Lerron/playerCharacter.h</itemPath>
+      <itemPath>C:/Users/tnc02_000/Documents/NetBeansProjects/Lerron/random.h</itemPath>
       <itemPath>room.h</itemPath>
+      <itemPath>C:/Users/tnc02_000/Documents/NetBeansProjects/Lerron/thePit.h</itemPath>
       <itemPath>tile.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
@@ -20,13 +26,18 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>C:/Users/tnc02_000/Documents/NetBeansProjects/Lerron/creature.cpp</itemPath>
       <itemPath>dungeon.cpp</itemPath>
       <itemPath>gang.cpp</itemPath>
       <itemPath>inventory.cpp</itemPath>
       <itemPath>item.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
       <itemPath>monster.cpp</itemPath>
+      <itemPath>C:/Users/tnc02_000/Documents/NetBeansProjects/Lerron/party.cpp</itemPath>
+      <itemPath>C:/Users/tnc02_000/Documents/NetBeansProjects/Lerron/playerCharacter.cpp</itemPath>
+      <itemPath>C:/Users/tnc02_000/Documents/NetBeansProjects/Lerron/random.cpp</itemPath>
       <itemPath>room.cpp</itemPath>
+      <itemPath>C:/Users/tnc02_000/Documents/NetBeansProjects/Lerron/thePit.cpp</itemPath>
       <itemPath>tile.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
@@ -51,6 +62,7 @@
       </toolsSet>
       <compileType>
         <cTool>
+          <standard>10</standard>
           <commandlineTool>x86_64-w64-mingw32-gcc</commandlineTool>
           <incDir>
             <pElem>C:/cygwin64/usr/x86_64-w64-mingw32/sys-root/mingw/include</pElem>
@@ -58,6 +70,7 @@
           <useLinkerLibraries>false</useLinkerLibraries>
         </cTool>
         <ccTool>
+          <standard>11</standard>
           <commandlineTool>x86_64-w64-mingw32-g++</commandlineTool>
           <incDir>
             <pElem>C:/cygwin64/usr/x86_64-w64-mingw32/sys-root/mingw/include</pElem>
@@ -75,6 +88,61 @@
           </linkerLibItems>
         </linkerTool>
       </compileType>
+      <item path="C:/Users/tnc02_000/Documents/NetBeansProjects/Lerron/attack_types.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="C:/Users/tnc02_000/Documents/NetBeansProjects/Lerron/creature.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="C:/Users/tnc02_000/Documents/NetBeansProjects/Lerron/creature.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="C:/Users/tnc02_000/Documents/NetBeansProjects/Lerron/party.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="C:/Users/tnc02_000/Documents/NetBeansProjects/Lerron/party.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="C:/Users/tnc02_000/Documents/NetBeansProjects/Lerron/playerCharacter.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="C:/Users/tnc02_000/Documents/NetBeansProjects/Lerron/playerCharacter.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="C:/Users/tnc02_000/Documents/NetBeansProjects/Lerron/random.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="C:/Users/tnc02_000/Documents/NetBeansProjects/Lerron/random.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="C:/Users/tnc02_000/Documents/NetBeansProjects/Lerron/thePit.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="C:/Users/tnc02_000/Documents/NetBeansProjects/Lerron/thePit.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
       <item path="class-declarations.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="dungeon.cpp" ex="false" tool="1" flavor2="0">
@@ -128,6 +196,61 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
+      <item path="C:/Users/tnc02_000/Documents/NetBeansProjects/Lerron/attack_types.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="C:/Users/tnc02_000/Documents/NetBeansProjects/Lerron/creature.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="C:/Users/tnc02_000/Documents/NetBeansProjects/Lerron/creature.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="C:/Users/tnc02_000/Documents/NetBeansProjects/Lerron/party.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="C:/Users/tnc02_000/Documents/NetBeansProjects/Lerron/party.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="C:/Users/tnc02_000/Documents/NetBeansProjects/Lerron/playerCharacter.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="C:/Users/tnc02_000/Documents/NetBeansProjects/Lerron/playerCharacter.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="C:/Users/tnc02_000/Documents/NetBeansProjects/Lerron/random.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="C:/Users/tnc02_000/Documents/NetBeansProjects/Lerron/random.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="C:/Users/tnc02_000/Documents/NetBeansProjects/Lerron/thePit.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="C:/Users/tnc02_000/Documents/NetBeansProjects/Lerron/thePit.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
       <item path="class-declarations.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="dungeon.cpp" ex="false" tool="1" flavor2="0">

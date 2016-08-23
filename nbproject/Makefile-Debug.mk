@@ -35,6 +35,11 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+	${OBJECTDIR}/_ext/ac8653fe/creature.o \
+	${OBJECTDIR}/_ext/ac8653fe/party.o \
+	${OBJECTDIR}/_ext/ac8653fe/playerCharacter.o \
+	${OBJECTDIR}/_ext/ac8653fe/random.o \
+	${OBJECTDIR}/_ext/ac8653fe/thePit.o \
 	${OBJECTDIR}/dungeon.o \
 	${OBJECTDIR}/gang.o \
 	${OBJECTDIR}/inventory.o \
@@ -69,45 +74,70 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/lerron.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	x86_64-w64-mingw32-g++ -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/lerron ${OBJECTFILES} ${LDLIBSOPTIONS}
 
+${OBJECTDIR}/_ext/ac8653fe/creature.o: nbproject/Makefile-${CND_CONF}.mk /cygdrive/C/Users/tnc02_000/Documents/NetBeansProjects/Lerron/creature.cpp 
+	${MKDIR} -p ${OBJECTDIR}/_ext/ac8653fe
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -I/cygdrive/C/cygwin64/usr/x86_64-w64-mingw32/sys-root/mingw/include -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/ac8653fe/creature.o /cygdrive/C/Users/tnc02_000/Documents/NetBeansProjects/Lerron/creature.cpp
+
+${OBJECTDIR}/_ext/ac8653fe/party.o: nbproject/Makefile-${CND_CONF}.mk /cygdrive/C/Users/tnc02_000/Documents/NetBeansProjects/Lerron/party.cpp 
+	${MKDIR} -p ${OBJECTDIR}/_ext/ac8653fe
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -I/cygdrive/C/cygwin64/usr/x86_64-w64-mingw32/sys-root/mingw/include -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/ac8653fe/party.o /cygdrive/C/Users/tnc02_000/Documents/NetBeansProjects/Lerron/party.cpp
+
+${OBJECTDIR}/_ext/ac8653fe/playerCharacter.o: nbproject/Makefile-${CND_CONF}.mk /cygdrive/C/Users/tnc02_000/Documents/NetBeansProjects/Lerron/playerCharacter.cpp 
+	${MKDIR} -p ${OBJECTDIR}/_ext/ac8653fe
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -I/cygdrive/C/cygwin64/usr/x86_64-w64-mingw32/sys-root/mingw/include -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/ac8653fe/playerCharacter.o /cygdrive/C/Users/tnc02_000/Documents/NetBeansProjects/Lerron/playerCharacter.cpp
+
+${OBJECTDIR}/_ext/ac8653fe/random.o: nbproject/Makefile-${CND_CONF}.mk /cygdrive/C/Users/tnc02_000/Documents/NetBeansProjects/Lerron/random.cpp 
+	${MKDIR} -p ${OBJECTDIR}/_ext/ac8653fe
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -I/cygdrive/C/cygwin64/usr/x86_64-w64-mingw32/sys-root/mingw/include -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/ac8653fe/random.o /cygdrive/C/Users/tnc02_000/Documents/NetBeansProjects/Lerron/random.cpp
+
+${OBJECTDIR}/_ext/ac8653fe/thePit.o: nbproject/Makefile-${CND_CONF}.mk /cygdrive/C/Users/tnc02_000/Documents/NetBeansProjects/Lerron/thePit.cpp 
+	${MKDIR} -p ${OBJECTDIR}/_ext/ac8653fe
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -I/cygdrive/C/cygwin64/usr/x86_64-w64-mingw32/sys-root/mingw/include -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/ac8653fe/thePit.o /cygdrive/C/Users/tnc02_000/Documents/NetBeansProjects/Lerron/thePit.cpp
+
 ${OBJECTDIR}/dungeon.o: nbproject/Makefile-${CND_CONF}.mk dungeon.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I/cygdrive/C/cygwin64/usr/x86_64-w64-mingw32/sys-root/mingw/include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/dungeon.o dungeon.cpp
+	$(COMPILE.cc) -g -I/cygdrive/C/cygwin64/usr/x86_64-w64-mingw32/sys-root/mingw/include -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/dungeon.o dungeon.cpp
 
 ${OBJECTDIR}/gang.o: nbproject/Makefile-${CND_CONF}.mk gang.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I/cygdrive/C/cygwin64/usr/x86_64-w64-mingw32/sys-root/mingw/include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/gang.o gang.cpp
+	$(COMPILE.cc) -g -I/cygdrive/C/cygwin64/usr/x86_64-w64-mingw32/sys-root/mingw/include -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/gang.o gang.cpp
 
 ${OBJECTDIR}/inventory.o: nbproject/Makefile-${CND_CONF}.mk inventory.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I/cygdrive/C/cygwin64/usr/x86_64-w64-mingw32/sys-root/mingw/include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/inventory.o inventory.cpp
+	$(COMPILE.cc) -g -I/cygdrive/C/cygwin64/usr/x86_64-w64-mingw32/sys-root/mingw/include -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/inventory.o inventory.cpp
 
 ${OBJECTDIR}/item.o: nbproject/Makefile-${CND_CONF}.mk item.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I/cygdrive/C/cygwin64/usr/x86_64-w64-mingw32/sys-root/mingw/include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/item.o item.cpp
+	$(COMPILE.cc) -g -I/cygdrive/C/cygwin64/usr/x86_64-w64-mingw32/sys-root/mingw/include -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/item.o item.cpp
 
 ${OBJECTDIR}/main.o: nbproject/Makefile-${CND_CONF}.mk main.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I/cygdrive/C/cygwin64/usr/x86_64-w64-mingw32/sys-root/mingw/include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
+	$(COMPILE.cc) -g -I/cygdrive/C/cygwin64/usr/x86_64-w64-mingw32/sys-root/mingw/include -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
 
 ${OBJECTDIR}/monster.o: nbproject/Makefile-${CND_CONF}.mk monster.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I/cygdrive/C/cygwin64/usr/x86_64-w64-mingw32/sys-root/mingw/include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/monster.o monster.cpp
+	$(COMPILE.cc) -g -I/cygdrive/C/cygwin64/usr/x86_64-w64-mingw32/sys-root/mingw/include -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/monster.o monster.cpp
 
 ${OBJECTDIR}/room.o: nbproject/Makefile-${CND_CONF}.mk room.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I/cygdrive/C/cygwin64/usr/x86_64-w64-mingw32/sys-root/mingw/include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/room.o room.cpp
+	$(COMPILE.cc) -g -I/cygdrive/C/cygwin64/usr/x86_64-w64-mingw32/sys-root/mingw/include -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/room.o room.cpp
 
 ${OBJECTDIR}/tile.o: nbproject/Makefile-${CND_CONF}.mk tile.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I/cygdrive/C/cygwin64/usr/x86_64-w64-mingw32/sys-root/mingw/include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/tile.o tile.cpp
+	$(COMPILE.cc) -g -I/cygdrive/C/cygwin64/usr/x86_64-w64-mingw32/sys-root/mingw/include -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/tile.o tile.cpp
 
 # Subprojects
 .build-subprojects:
