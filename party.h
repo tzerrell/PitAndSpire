@@ -14,6 +14,7 @@
 #ifndef PARTY_H
 #define PARTY_H
 
+#include "cardinal_dir.h"
 #include "playerCharacter.h"
 
 const int MAX_PARTY_SIZE = 4;
@@ -23,8 +24,18 @@ public:
     party();
     party(const party& orig);
     virtual ~party();
+    
+    // TODO: Confirm I want inline here
+    inline void turnRight() { facing = rotateRight(facing); };
+    inline void turnLeft() { facing = rotateLeft(facing); };
+    inline void turn180() { facing = rotate180(facing); };
+    
+    bool advance();
 private:
     playerCharacter character[MAX_PARTY_SIZE];
+    cardinal_dir facing;
+    struct { int x; int y; int z; } coord;
+    room* inRoom;
 };
 
 #endif /* PARTY_H */

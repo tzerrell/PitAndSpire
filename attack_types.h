@@ -14,7 +14,7 @@
 #ifndef ATTACK_TYPES_H
 #define ATTACK_TYPES_H
 
-enum attack_types {
+enum class attack_types {
     ATKT_MELEE_WEAP,
     ATKT_MELEE_NATURAL,
     ATKT_RANGED_WEAP,
@@ -26,7 +26,7 @@ enum attack_types {
     ATKT_VISUAL  //Think medusa's gaze
 };
 
-enum damage_types {
+enum class damage_types {
     DMGT_IMPACT,
     DMGT_CUT,
     DMGT_STAB,
@@ -35,10 +35,13 @@ enum damage_types {
     DMGT_ACID,
     DMGT_ELECTRIC,
     DMGT_LIGHT,
-    DMGT_HOLY,
-    DMGT_PROFANE,
+    DMGT_HOLY,      //specific to the spire
+    DMGT_PROFANE,   //specific to the pit
     DMGT_POISON,
-    DMGT_ROT
+    DMGT_ROT,       //specific to the wilds
+    DMGT_ETHEREAL     //specific to the academy
+            //No damage type specific to the burghers/the guilds (name undecided)
+            //No damage type specific to the nobles/the court/the houses (name undecided)
 };
 
 

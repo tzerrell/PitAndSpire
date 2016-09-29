@@ -22,3 +22,13 @@ party::party(const party& orig) {
 party::~party() {
 }
 
+bool party::advance() {
+    //Returns true if the party successfully advanced, false otherwise.
+    
+    //TODO:
+    //Check if there is a wall in the way
+    //Check if monsters can block movement (no secret door detection if monsters have block opportunity, no need to check if monsters succeed)
+    //Advance the coordinate
+    //See if the party is supported on new location; if not drop them until they are supported
+    //If necessary, change the room or even dungeon party is in (updating monsters etc as necessary)
+}
