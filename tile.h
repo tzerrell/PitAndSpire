@@ -22,6 +22,9 @@ public:
     virtual ~tile();
     
     static tile* lookup(int x ,int y ,int z);    //returns the tile at given global coordinates
+    
+    bool isPassable(WallDirection dir);     //Can you walk from this tile in dir?
+    static bool isPassable(WallType wall);
 private:
     room* owner;
     struct {int x; int y; int z;} location;

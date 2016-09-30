@@ -35,6 +35,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+	${OBJECTDIR}/_ext/ac8653fe/cardinal_dir.o \
 	${OBJECTDIR}/_ext/ac8653fe/creature.o \
 	${OBJECTDIR}/_ext/ac8653fe/party.o \
 	${OBJECTDIR}/_ext/ac8653fe/playerCharacter.o \
@@ -72,6 +73,11 @@ LDLIBSOPTIONS=
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/lerron.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/lerron ${OBJECTFILES} ${LDLIBSOPTIONS}
+
+${OBJECTDIR}/_ext/ac8653fe/cardinal_dir.o: /cygdrive/C/Users/tnc02_000/Documents/NetBeansProjects/Lerron/cardinal_dir.cpp 
+	${MKDIR} -p ${OBJECTDIR}/_ext/ac8653fe
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/ac8653fe/cardinal_dir.o /cygdrive/C/Users/tnc02_000/Documents/NetBeansProjects/Lerron/cardinal_dir.cpp
 
 ${OBJECTDIR}/_ext/ac8653fe/creature.o: /cygdrive/C/Users/tnc02_000/Documents/NetBeansProjects/Lerron/creature.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/ac8653fe

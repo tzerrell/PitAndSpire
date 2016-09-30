@@ -36,6 +36,8 @@ private:
     cardinal_dir facing;
     struct { int x; int y; int z; } coord;
     room* inRoom;
+    
+    int fall(); //see if the party should fall from current position; returns # squares fallen
 };
 
 #endif /* PARTY_H */

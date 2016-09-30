@@ -35,6 +35,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+	${OBJECTDIR}/_ext/ac8653fe/cardinal_dir.o \
 	${OBJECTDIR}/_ext/ac8653fe/creature.o \
 	${OBJECTDIR}/_ext/ac8653fe/party.o \
 	${OBJECTDIR}/_ext/ac8653fe/playerCharacter.o \
@@ -72,6 +73,11 @@ LDLIBSOPTIONS=-L/cygdrive/C/cygwin64/usr/x86_64-w64-mingw32/sys-root/mingw/lib -
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/lerron.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	x86_64-w64-mingw32-g++ -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/lerron ${OBJECTFILES} ${LDLIBSOPTIONS}
+
+${OBJECTDIR}/_ext/ac8653fe/cardinal_dir.o: nbproject/Makefile-${CND_CONF}.mk /cygdrive/C/Users/tnc02_000/Documents/NetBeansProjects/Lerron/cardinal_dir.cpp 
+	${MKDIR} -p ${OBJECTDIR}/_ext/ac8653fe
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -I/cygdrive/C/cygwin64/usr/x86_64-w64-mingw32/sys-root/mingw/include -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/ac8653fe/cardinal_dir.o /cygdrive/C/Users/tnc02_000/Documents/NetBeansProjects/Lerron/cardinal_dir.cpp
 
 ${OBJECTDIR}/_ext/ac8653fe/creature.o: nbproject/Makefile-${CND_CONF}.mk /cygdrive/C/Users/tnc02_000/Documents/NetBeansProjects/Lerron/creature.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/ac8653fe

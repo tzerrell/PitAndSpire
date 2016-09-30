@@ -14,6 +14,8 @@
 #ifndef CARDINAL_DIR_H
 #define CARDINAL_DIR_H
 
+#include "tile.h"
+
 enum class cardinal_dir {
     DIR_E,
     DIR_N,
@@ -31,6 +33,9 @@ cardinal_dir rotateLeft(cardinal_dir dir) {
 cardinal_dir rotate180(cardinal_dir dir) {
     return (static_cast<int>dir + 2) % 4;
 };
+
+WallDirection dirCast(cardinal_dir dir);
+cardinal_dir dirCast(WallDirection dir);
 
 #endif /* CARDINAL_DIR_H */
 

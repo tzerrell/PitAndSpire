@@ -8,6 +8,7 @@
 #include "tile.h"
 
 #include "dungeon.h"
+#include "cardinal_dir.h"
 
 tile::tile() {
 }
