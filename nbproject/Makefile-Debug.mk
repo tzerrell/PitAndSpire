@@ -39,7 +39,6 @@ OBJECTFILES= \
 	${OBJECTDIR}/_ext/ac8653fe/party.o \
 	${OBJECTDIR}/_ext/ac8653fe/playerCharacter.o \
 	${OBJECTDIR}/_ext/ac8653fe/random.o \
-	${OBJECTDIR}/_ext/ac8653fe/thePit.o \
 	${OBJECTDIR}/dungeon.o \
 	${OBJECTDIR}/gang.o \
 	${OBJECTDIR}/inventory.o \
@@ -93,11 +92,6 @@ ${OBJECTDIR}/_ext/ac8653fe/random.o: nbproject/Makefile-${CND_CONF}.mk /cygdrive
 	${MKDIR} -p ${OBJECTDIR}/_ext/ac8653fe
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -I/cygdrive/C/cygwin64/usr/x86_64-w64-mingw32/sys-root/mingw/include -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/ac8653fe/random.o /cygdrive/C/Users/tnc02_000/Documents/NetBeansProjects/Lerron/random.cpp
-
-${OBJECTDIR}/_ext/ac8653fe/thePit.o: nbproject/Makefile-${CND_CONF}.mk /cygdrive/C/Users/tnc02_000/Documents/NetBeansProjects/Lerron/thePit.cpp 
-	${MKDIR} -p ${OBJECTDIR}/_ext/ac8653fe
-	${RM} "$@.d"
-	$(COMPILE.cc) -g -I/cygdrive/C/cygwin64/usr/x86_64-w64-mingw32/sys-root/mingw/include -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/ac8653fe/thePit.o /cygdrive/C/Users/tnc02_000/Documents/NetBeansProjects/Lerron/thePit.cpp
 
 ${OBJECTDIR}/dungeon.o: nbproject/Makefile-${CND_CONF}.mk dungeon.cpp 
 	${MKDIR} -p ${OBJECTDIR}

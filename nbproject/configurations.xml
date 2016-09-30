@@ -5,6 +5,7 @@
                    displayName="Header Files"
                    projectFiles="true">
       <itemPath>C:/Users/tnc02_000/Documents/NetBeansProjects/Lerron/attack_types.h</itemPath>
+      <itemPath>C:/Users/tnc02_000/Documents/NetBeansProjects/Lerron/cardinal_dir.h</itemPath>
       <itemPath>class-declarations.h</itemPath>
       <itemPath>C:/Users/tnc02_000/Documents/NetBeansProjects/Lerron/creature.h</itemPath>
       <itemPath>dungeon.h</itemPath>
@@ -16,7 +17,6 @@
       <itemPath>C:/Users/tnc02_000/Documents/NetBeansProjects/Lerron/playerCharacter.h</itemPath>
       <itemPath>C:/Users/tnc02_000/Documents/NetBeansProjects/Lerron/random.h</itemPath>
       <itemPath>room.h</itemPath>
-      <itemPath>C:/Users/tnc02_000/Documents/NetBeansProjects/Lerron/thePit.h</itemPath>
       <itemPath>tile.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
@@ -37,7 +37,6 @@
       <itemPath>C:/Users/tnc02_000/Documents/NetBeansProjects/Lerron/playerCharacter.cpp</itemPath>
       <itemPath>C:/Users/tnc02_000/Documents/NetBeansProjects/Lerron/random.cpp</itemPath>
       <itemPath>room.cpp</itemPath>
-      <itemPath>C:/Users/tnc02_000/Documents/NetBeansProjects/Lerron/thePit.cpp</itemPath>
       <itemPath>tile.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
@@ -93,6 +92,11 @@
             tool="3"
             flavor2="0">
       </item>
+      <item path="C:/Users/tnc02_000/Documents/NetBeansProjects/Lerron/cardinal_dir.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
       <item path="C:/Users/tnc02_000/Documents/NetBeansProjects/Lerron/creature.cpp"
             ex="false"
             tool="1"
@@ -129,16 +133,6 @@
             flavor2="0">
       </item>
       <item path="C:/Users/tnc02_000/Documents/NetBeansProjects/Lerron/random.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="C:/Users/tnc02_000/Documents/NetBeansProjects/Lerron/thePit.cpp"
-            ex="false"
-            tool="1"
-            flavor2="0">
-      </item>
-      <item path="C:/Users/tnc02_000/Documents/NetBeansProjects/Lerron/thePit.h"
             ex="false"
             tool="3"
             flavor2="0">
@@ -201,6 +195,11 @@
             tool="3"
             flavor2="0">
       </item>
+      <item path="C:/Users/tnc02_000/Documents/NetBeansProjects/Lerron/cardinal_dir.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
       <item path="C:/Users/tnc02_000/Documents/NetBeansProjects/Lerron/creature.cpp"
             ex="false"
             tool="1"
@@ -237,16 +236,6 @@
             flavor2="0">
       </item>
       <item path="C:/Users/tnc02_000/Documents/NetBeansProjects/Lerron/random.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="C:/Users/tnc02_000/Documents/NetBeansProjects/Lerron/thePit.cpp"
-            ex="false"
-            tool="1"
-            flavor2="0">
-      </item>
-      <item path="C:/Users/tnc02_000/Documents/NetBeansProjects/Lerron/thePit.h"
             ex="false"
             tool="3"
             flavor2="0">

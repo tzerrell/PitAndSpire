@@ -11,15 +11,17 @@
 #include <map>
 #include "class-declarations.h"
 
-enum WallDirection { NWallDir, EWallDir, SWallDir, WWallDir, 
+enum class WallDirection { NWallDir, EWallDir, SWallDir, WWallDir, 
     DWallDir, UWallDir };
-enum WallType { /*TODO*/ }; //TODO: might be class? instead of enum
+enum class WallType { /*TODO*/ }; //TODO: might be class? instead of enum
 
 class tile {
 public:
     tile();
     tile(const tile& orig);
     virtual ~tile();
+    
+    static tile* lookup(int x ,int y ,int z);    //returns the tile at given global coordinates
 private:
     room* owner;
     struct {int x; int y; int z;} location;

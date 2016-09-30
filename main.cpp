@@ -15,6 +15,7 @@
 
 //TODO: Temp
 #include "tile.h"
+#include "dungeon.h"
 //End Temp
 
 /*
