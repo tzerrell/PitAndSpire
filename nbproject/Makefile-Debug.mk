@@ -37,6 +37,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 OBJECTFILES= \
 	${OBJECTDIR}/_ext/ac8653fe/cardinal_dir.o \
 	${OBJECTDIR}/_ext/ac8653fe/creature.o \
+	${OBJECTDIR}/_ext/ac8653fe/monsterType.o \
 	${OBJECTDIR}/_ext/ac8653fe/party.o \
 	${OBJECTDIR}/_ext/ac8653fe/playerCharacter.o \
 	${OBJECTDIR}/_ext/ac8653fe/random.o \
@@ -83,6 +84,11 @@ ${OBJECTDIR}/_ext/ac8653fe/creature.o: nbproject/Makefile-${CND_CONF}.mk /cygdri
 	${MKDIR} -p ${OBJECTDIR}/_ext/ac8653fe
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -I/cygdrive/C/cygwin64/usr/x86_64-w64-mingw32/sys-root/mingw/include -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/ac8653fe/creature.o /cygdrive/C/Users/tnc02_000/Documents/NetBeansProjects/Lerron/creature.cpp
+
+${OBJECTDIR}/_ext/ac8653fe/monsterType.o: nbproject/Makefile-${CND_CONF}.mk /cygdrive/C/Users/tnc02_000/Documents/NetBeansProjects/Lerron/monsterType.cpp 
+	${MKDIR} -p ${OBJECTDIR}/_ext/ac8653fe
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -I/cygdrive/C/cygwin64/usr/x86_64-w64-mingw32/sys-root/mingw/include -std=c++14 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/ac8653fe/monsterType.o /cygdrive/C/Users/tnc02_000/Documents/NetBeansProjects/Lerron/monsterType.cpp
 
 ${OBJECTDIR}/_ext/ac8653fe/party.o: nbproject/Makefile-${CND_CONF}.mk /cygdrive/C/Users/tnc02_000/Documents/NetBeansProjects/Lerron/party.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/ac8653fe
