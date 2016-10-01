@@ -58,3 +58,23 @@ bool party::advance() {
     
     return true;
 }
+
+int party::fall() {
+    //If there is a floor, don't fall.
+    if (!(tile::lookup(coord.x,coord.y,coord.z)->isPassable(DWallDir))) 
+        return 0;
+    
+    int descentDistance = 0;
+    while (tile::lookup(coord.x,coord.y,coord.z - descentDistance)->isPassable(DWallDir)) {
+        ++descentDistance;
+    }
+    
+    //TODO: If the party is flying, subtract max flying height from descentDistance (never below 0 though)
+    
+    //TODO: Falling damage if applicable
+    
+    //Fall
+    coord.z -= descentDistance;
+    
+    return descentDistance;
+}
