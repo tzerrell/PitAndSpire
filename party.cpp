@@ -25,6 +25,29 @@ party::party(const party& orig) {
 party::~party() {
 }
 
+void party::updateLocation(int newX, int newY, int newZ) {
+    //Update room if it's changed
+    room* newRoom = tile::lookup(newX, newY,newZ)->getOwner();
+    if (*inRoom != *newRoom)
+        enter(newRoom);
+    
+    //TODO: check for things like items, traps, ...
+    //This should happen before falling (but perhaps after updating the coord?)
+    //so that if fall calls updateLocation the result of that call is what
+    //stays.
+    
+    //Update coord
+    coord.x = newX; coord.y = newY; coord.z = newZ;
+    
+    //If necessary, fall
+    //Note that fall() calls updateLocation, so be careful
+    fall();
+}
+
+void party::enter(room* newRoom) {
+    
+}
+
 bool party::advance() {
     //Returns true if the party successfully advanced, false otherwise.
     
@@ -35,26 +58,22 @@ bool party::advance() {
     }
     
     //TODO: Check if monsters can block movement (no secret door detection if monsters have block opportunity, no need to check if monsters succeed)
+    
     //Advance the coordinate
     switch (facing) {
         case cardinal_dir::Dir_E:
-            coord.x += 1;
+            updateLocation(coord.x + 1, coord.y, coord.z);
             break;
         case cardinal_dir::Dir_W:
-            coord.x -= 1;
+            updateLocation(coord.x - 1, coord.y, coord.z);
             break;
         case cardinal_dir::Dir_N:
-            coord.y += 1;
+            updateLocation(coord.x, coord.y + 1, coord.z);
             break;
         case cardinal_dir::Dir_S:
-            coord.y -= 1;
+            updateLocation(coord.x, coord.y - 1, coord.z);
             break;
     }
-    
-    //See if the party is supported on new location; if not drop them until they are supported
-    this->fall();
-    
-    //TODO: If necessary, change the room or even dungeon party is in (updating monsters etc as necessary)
     
     return true;
 }
@@ -74,7 +93,9 @@ int party::fall() {
     //TODO: Falling damage if applicable
     
     //Fall
-    coord.z -= descentDistance;
+    //Note that updateLocation calls fall(), so be careful
+    if (descentDistance != 0)
+        updateLocation(coord.x, coord.y, coord.z - descentDistance);
     
     return descentDistance;
 }

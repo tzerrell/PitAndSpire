@@ -30,6 +30,8 @@ public:
     inline void turnLeft() { facing = rotateLeft(facing); };
     inline void turn180() { facing = rotate180(facing); };
     
+    void updateLocation(int newX, int newY, int newZ);
+    void enter(room*);
     bool advance();
 private:
     playerCharacter character[MAX_PARTY_SIZE];

@@ -10,9 +10,6 @@
 room::room() {
 }
 
-room::room(const room& orig) {
-}
-
 room::~room() {
 }
 

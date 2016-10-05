@@ -28,6 +28,10 @@ tile* tile::lookup(int x, int y, int z) {
     return dung->getTile(x,y,z);
 }
 
+room* tile::getOwner() {
+    return owner;
+}
+
 bool tile::isPassable(WallDirection dir) {
     return isPassable(wall[dir]);
 }
@@ -36,4 +40,17 @@ bool tile::isPassable(WallType wall) {
     //TODO: Implement
     
     return false;
+}
+
+bool tile::operator==(const tile& lhs, const tile& rhs) {
+    //Two tiles must be the same if they are at the same location. Note that
+    //this is not really enforced elsewhere in the code (currently) and so might
+    //be a source of errors. TODO: Consider revising?
+    return ((lhs.location.x == rhs.location.x) &&
+            (lhs.location.y == rhs.location.y) &&
+            (lhs.location.z == rhs.location.z));
+}
+
+bool tile::operator!=(const tile& lhs, const tile& rhs) {
+    return !(lhs == rhs);
 }

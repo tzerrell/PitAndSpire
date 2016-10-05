@@ -50,6 +50,7 @@ protected:
             { return getLength() * getWidth() * getHeight(); };
 private:
     std::vector<tile*> tiles;
+    std::vector<room*> rooms;
     const int westBoundary; const int eastBoundary;
     const int southBoundary; const int northBoundary;
     const int bottomBoundary; const int topBoundary;

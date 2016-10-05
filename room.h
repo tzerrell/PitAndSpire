@@ -13,7 +13,6 @@
 class room {
 public:
     room();
-    room(const room& orig);
     virtual ~room();
 private:
     dungeon*    owner;
