@@ -23,3 +23,14 @@ bool dungeon::containsCoord(int x, int y, int z) {
     if (z < this->getBottomBound() || z > this->getTopBound()) return false;
     return true;
 }
+
+tile* dungeon::getTile(int x, int y, int z) {
+    std::size_t width = getWidth();
+    std::size_t height = getHeight();
+    
+    std::size_t index = width*height*(x - westBoundary)
+            + height*(y - southBoundary)
+            + (z - bottomBoundary);
+    
+    return tiles[index];
+}

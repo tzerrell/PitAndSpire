@@ -27,3 +27,13 @@ tile* tile::lookup(int x, int y, int z) {
     
     return dung->getTile(x,y,z);
 }
+
+bool tile::isPassable(WallDirection dir) {
+    return isPassable(wall[dir]);
+}
+
+bool tile::isPassable(WallType wall) {
+    //TODO: Implement
+    
+    return false;
+}

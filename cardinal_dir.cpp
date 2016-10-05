@@ -38,3 +38,14 @@ cardinal_dir dirCast(WallDirection dir) {
             //TODO: Throw exception for passing BWallDir or TWallDir as param
     }
 }
+
+// TODO: Is this appropriate explicit casting of enum class to int?
+cardinal_dir rotateRight(cardinal_dir dir) {
+    return static_cast<cardinal_dir>((static_cast<int>(dir) - 1) % 4);
+};
+cardinal_dir rotateLeft(cardinal_dir dir) {
+    return static_cast<cardinal_dir>((static_cast<int>(dir) + 1) % 4);
+};
+cardinal_dir rotate180(cardinal_dir dir) {
+    return static_cast<cardinal_dir>((static_cast<int>(dir) + 2) % 4);
+};
