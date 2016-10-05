@@ -37,16 +37,16 @@ bool party::advance() {
     //TODO: Check if monsters can block movement (no secret door detection if monsters have block opportunity, no need to check if monsters succeed)
     //Advance the coordinate
     switch (facing) {
-        case DIR_E:
+        case cardinal_dir::Dir_E:
             coord.x += 1;
             break;
-        case DIR_W:
+        case cardinal_dir::Dir_W:
             coord.x -= 1;
             break;
-        case DIR_N:
+        case cardinal_dir::Dir_N:
             coord.y += 1;
             break;
-        case DIR_S:
+        case cardinal_dir::Dir_S:
             coord.y -= 1;
             break;
     }
@@ -61,11 +61,11 @@ bool party::advance() {
 
 int party::fall() {
     //If there is a floor, don't fall.
-    if (!(tile::lookup(coord.x,coord.y,coord.z)->isPassable(DWallDir))) 
+    if (!(tile::lookup(coord.x,coord.y,coord.z)->isPassable(WallDirection::DWallDir))) 
         return 0;
     
     int descentDistance = 0;
-    while (tile::lookup(coord.x,coord.y,coord.z - descentDistance)->isPassable(DWallDir)) {
+    while (tile::lookup(coord.x,coord.y,coord.z - descentDistance)->isPassable(WallDirection::DWallDir)) {
         ++descentDistance;
     }
     

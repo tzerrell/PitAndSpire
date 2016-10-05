@@ -17,21 +17,21 @@
 #include "tile.h"
 
 enum class cardinal_dir {
-    DIR_E,
-    DIR_N,
-    DIR_W,
-    DIR_S
+    Dir_E,
+    Dir_N,
+    Dir_W,
+    Dir_S
 };
 
 // TODO: Is this appropriate explicit casting of enum class to int?
 cardinal_dir rotateRight(cardinal_dir dir) {
-    return (static_cast<int>dir - 1) % 4;
+    return static_cast<cardinal_dir>((static_cast<int>(dir) - 1) % 4);
 };
 cardinal_dir rotateLeft(cardinal_dir dir) {
-    return (static_cast<int>dir + 1) % 4;
+    return static_cast<cardinal_dir>((static_cast<int>(dir) + 1) % 4);
 };
 cardinal_dir rotate180(cardinal_dir dir) {
-    return (static_cast<int>dir + 2) % 4;
+    return static_cast<cardinal_dir>((static_cast<int>(dir) + 2) % 4);
 };
 
 WallDirection dirCast(cardinal_dir dir);

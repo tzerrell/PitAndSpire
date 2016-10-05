@@ -27,7 +27,6 @@ class dungeon {
 public:
     //TODO: Constructors should actually initialize the dungeon
     dungeon(int WBnd, int EBnd, int SBnd, int NBnd, int BBnd, int TBnd);
-    dungeon(const dungeon& orig);
     virtual ~dungeon();
     
     tile* getTile(int x, int y, int z); //Gets the tile at global coordinate (x,y,z)

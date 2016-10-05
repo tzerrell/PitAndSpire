@@ -14,9 +14,6 @@ dungeon::dungeon(int WBnd, int EBnd, int SBnd, int NBnd, int BBnd, int TBnd)
     //TODO
 }
 
-dungeon::dungeon(const dungeon& orig) {
-}
-
 dungeon::~dungeon() {
 }
 

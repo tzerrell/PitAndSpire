@@ -5,30 +5,34 @@
  */
 
 #include "cardinal_dir.h"
+#include "tile.h"
 
 WallDirection dirCast(cardinal_dir dir) {
     switch(dir) {
-        case DIR_E:
-            return EWallDir;
-        case DIR_W:
-            return WWallDir;
-        case DIR_S:
-            return SWallDir;
-        case DIR_N:
-            return NWallDir;
+        case cardinal_dir::Dir_E:
+            return WallDirection::EWallDir;
+        case cardinal_dir::Dir_W:
+            return WallDirection::WWallDir;
+        case cardinal_dir::Dir_S:
+            return WallDirection::SWallDir;
+        case cardinal_dir::Dir_N:
+            return WallDirection::NWallDir;
+        default:
+            ;
+            //TODO: Throw exception "unexpected failure of dirCast switch to find option" or the like
     }
 }
 
 cardinal_dir dirCast(WallDirection dir) {
     switch(dir) {
-        case EWallDir:
-            return EWallDir;
-        case WWallDir:
-            return WWallDir;
-        case SWallDir:
-            return SWallDir;
-        case NWallDir:
-            return NWallDir;
+        case WallDirection::EWallDir:
+            return cardinal_dir::Dir_E;
+        case WallDirection::WWallDir:
+            return cardinal_dir::Dir_W;
+        case WallDirection::SWallDir:
+            return cardinal_dir::Dir_S;
+        case WallDirection::NWallDir:
+            return cardinal_dir::Dir_N;
         default:
             ;
             //TODO: Throw exception for passing BWallDir or TWallDir as param
