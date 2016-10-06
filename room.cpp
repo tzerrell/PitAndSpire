@@ -13,3 +13,9 @@ room::room() {
 room::~room() {
 }
 
+void room::presentGangTo(party* targetParty) {
+    //TODO: Generate a gang for the room if it needs one (no current gang and 
+    //it has been long enough since a party patrolled this room)
+    
+    targetParty.activeGang = occupants;
+}

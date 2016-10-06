@@ -17,6 +17,9 @@
 #include "cardinal_dir.h"
 #include "playerCharacter.h"
 
+//Forward Declarations
+class gang;
+
 const int MAX_PARTY_SIZE = 4;
 
 class party {
@@ -33,11 +36,18 @@ public:
     void updateLocation(int newX, int newY, int newZ);
     void enter(room*);
     bool advance();
+    
+    friend void room::presentGangTo(party*);
 private:
     playerCharacter character[MAX_PARTY_SIZE];
     cardinal_dir facing;
     struct { int x; int y; int z; } coord;
     room* inRoom;
+    gang* activeGang;
+    //int currPatrolOffsetTime; //How far in the future the respawn time
+                                //should be; that is, how long is this party's
+                                //patrol effective for (currently). 
+                                //TODO: This is not yet an implemented feature
     
     int fall(); //see if the party should fall from current position; returns # squares fallen
 };

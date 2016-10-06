@@ -27,7 +27,7 @@ party::~party() {
 
 void party::updateLocation(int newX, int newY, int newZ) {
     //Update room if it's changed
-    room* newRoom = tile::lookup(newX, newY,newZ)->getOwner();
+    room* newRoom = tile::lookup(newX, newY, newZ)->getOwner();
     if (*inRoom != *newRoom)
         enter(newRoom);
     
@@ -45,7 +45,9 @@ void party::updateLocation(int newX, int newY, int newZ) {
 }
 
 void party::enter(room* newRoom) {
-    
+    inRoom = newRoom;
+    newRoom->presentGangTo(this);
+    //TODO: Anything else?
 }
 
 bool party::advance() {
