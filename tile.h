@@ -22,12 +22,12 @@ public:
     virtual ~tile();
     
     static tile* lookup(int x ,int y ,int z);    //returns the tile at given global coordinates
-    inline room* getOwner();
+    room* getOwner();
     
     bool isPassable(WallDirection dir);     //Can you walk from this tile in dir?
     
-    inline bool operator==(const tile& lhs, const tile& rhs);
-    inline bool operator!=(const tile& lhs, const tile& rhs);
+    bool operator==(const tile& rhs);
+    bool operator!=(const tile& rhs);
 protected:
     static bool isPassable(WallType wall);
 private:

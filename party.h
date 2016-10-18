@@ -16,9 +16,11 @@
 
 #include "cardinal_dir.h"
 #include "playerCharacter.h"
+#include "room.h"
 
 //Forward Declarations
 class gang;
+class room;
 
 const int MAX_PARTY_SIZE = 4;
 

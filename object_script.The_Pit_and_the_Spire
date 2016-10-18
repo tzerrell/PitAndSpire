@@ -1,0 +1,16 @@
+INPUT(
+./build/Debug/MinGW_Qt-Windows/cardinal_dir.o
+./build/Debug/MinGW_Qt-Windows/creature.o
+./build/Debug/MinGW_Qt-Windows/dungeon.o
+./build/Debug/MinGW_Qt-Windows/gang.o
+./build/Debug/MinGW_Qt-Windows/inventory.o
+./build/Debug/MinGW_Qt-Windows/item.o
+./build/Debug/MinGW_Qt-Windows/monster.o
+./build/Debug/MinGW_Qt-Windows/monsterType.o
+./build/Debug/MinGW_Qt-Windows/party.o
+./build/Debug/MinGW_Qt-Windows/playerCharacter.o
+./build/Debug/MinGW_Qt-Windows/random.o
+./build/Debug/MinGW_Qt-Windows/room.o
+./build/Debug/MinGW_Qt-Windows/tile.o
+./build/Debug/MinGW_Qt-Windows/main.o
+);

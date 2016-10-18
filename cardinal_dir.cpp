@@ -18,8 +18,8 @@ WallDirection dirCast(cardinal_dir dir) {
         case cardinal_dir::Dir_N:
             return WallDirection::NWallDir;
         default:
-            ;
             //TODO: Throw exception "unexpected failure of dirCast switch to find option" or the like
+            return WallDirection::NWallDir;
     }
 }
 
@@ -34,8 +34,8 @@ cardinal_dir dirCast(WallDirection dir) {
         case WallDirection::NWallDir:
             return cardinal_dir::Dir_N;
         default:
-            ;
             //TODO: Throw exception for passing BWallDir or TWallDir as param
+            return cardinal_dir::Dir_N;
     }
 }
 
