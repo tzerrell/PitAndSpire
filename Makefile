@@ -82,14 +82,12 @@ clobber: .clobber-post
 
 # all
 all: .all-post
-#	-l/c/cygwin64/lib/w32api/ws2_32
 
 .all-pre:
 # Add your pre 'all' code here...
 
 .all-post: .all-impl
 # Add your post 'all' code here...
-
 
 
 # build tests

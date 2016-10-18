@@ -3,21 +3,23 @@
     <type>org.netbeans.modules.cnd.makeproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
-            <name>Lerron</name>
+            <name>The Pit and the Spire</name>
             <c-extensions/>
             <cpp-extensions>cpp</cpp-extensions>
             <header-extensions>h</header-extensions>
             <sourceEncoding>UTF-8</sourceEncoding>
             <make-dep-projects/>
-            <sourceRootList/>
+            <sourceRootList>
+                <sourceRootElem>C:\Users\tnc02_000\Documents\NetBeansProjects\The Pit and the Spire</sourceRootElem>
+            </sourceRootList>
             <confList>
                 <confElem>
                     <name>Debug</name>
-                    <type>1</type>
+                    <type>4</type>
                 </confElem>
                 <confElem>
                     <name>Release</name>
-                    <type>1</type>
+                    <type>4</type>
                 </confElem>
             </confList>
             <formatting>

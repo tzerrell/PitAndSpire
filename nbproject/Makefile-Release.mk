@@ -14,14 +14,15 @@ GREP=grep
 NM=nm
 CCADMIN=CCadmin
 RANLIB=ranlib
-CC=x86_64-w64-mingw32-gcc
-CCC=x86_64-w64-mingw32-g++
-CXX=x86_64-w64-mingw32-g++
+CC=gcc
+CCC=g++
+CXX=g++
 FC=gfortran
 AS=as
+QMAKE=qmake
 
 # Macros
-CND_PLATFORM=Cygwin-Windows
+CND_PLATFORM=MinGW_Qt-Windows
 CND_DLIB_EXT=dll
 CND_CONF=Release
 CND_DISTDIR=dist
@@ -34,21 +35,7 @@ include Makefile
 OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
-OBJECTFILES= \
-	${OBJECTDIR}/_ext/ac8653fe/cardinal_dir.o \
-	${OBJECTDIR}/_ext/ac8653fe/creature.o \
-	${OBJECTDIR}/_ext/ac8653fe/monsterType.o \
-	${OBJECTDIR}/_ext/ac8653fe/party.o \
-	${OBJECTDIR}/_ext/ac8653fe/playerCharacter.o \
-	${OBJECTDIR}/_ext/ac8653fe/random.o \
-	${OBJECTDIR}/dungeon.o \
-	${OBJECTDIR}/gang.o \
-	${OBJECTDIR}/inventory.o \
-	${OBJECTDIR}/item.o \
-	${OBJECTDIR}/main.o \
-	${OBJECTDIR}/monster.o \
-	${OBJECTDIR}/room.o \
-	${OBJECTDIR}/tile.o
+OBJECTFILES=
 
 
 # C Compiler Flags
@@ -67,96 +54,27 @@ ASFLAGS=
 # Link Libraries and Options
 LDLIBSOPTIONS=
 
+nbproject/qt-${CND_CONF}.mk: nbproject/qt-${CND_CONF}.pro FORCE
+	${QMAKE} VPATH=. -spec win32-g++ -o qttmp-${CND_CONF}.mk nbproject/qt-${CND_CONF}.pro
+	mv -f qttmp-${CND_CONF}.mk nbproject/qt-${CND_CONF}.mk
+	@sed -e 's/\/qt\/bin/\/qt\/bin\//g' nbproject/qt-${CND_CONF}.mk >nbproject/qt-${CND_CONF}.tmp
+	@mv -f nbproject/qt-${CND_CONF}.tmp nbproject/qt-${CND_CONF}.mk
+
+FORCE:
+
 # Build Targets
-.build-conf: ${BUILD_SUBPROJECTS}
-	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/lerron.exe
+.build-conf: ${BUILD_SUBPROJECTS} nbproject/qt-${CND_CONF}.mk
+	"${MAKE}" -f nbproject/qt-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/The_Pit_and_the_Spire.exe
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/lerron.exe: ${OBJECTFILES}
-	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/lerron ${OBJECTFILES} ${LDLIBSOPTIONS}
-
-${OBJECTDIR}/_ext/ac8653fe/cardinal_dir.o: /cygdrive/C/Users/tnc02_000/Documents/NetBeansProjects/Lerron/cardinal_dir.cpp 
-	${MKDIR} -p ${OBJECTDIR}/_ext/ac8653fe
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/ac8653fe/cardinal_dir.o /cygdrive/C/Users/tnc02_000/Documents/NetBeansProjects/Lerron/cardinal_dir.cpp
-
-${OBJECTDIR}/_ext/ac8653fe/creature.o: /cygdrive/C/Users/tnc02_000/Documents/NetBeansProjects/Lerron/creature.cpp 
-	${MKDIR} -p ${OBJECTDIR}/_ext/ac8653fe
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/ac8653fe/creature.o /cygdrive/C/Users/tnc02_000/Documents/NetBeansProjects/Lerron/creature.cpp
-
-${OBJECTDIR}/_ext/ac8653fe/monsterType.o: /cygdrive/C/Users/tnc02_000/Documents/NetBeansProjects/Lerron/monsterType.cpp 
-	${MKDIR} -p ${OBJECTDIR}/_ext/ac8653fe
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/ac8653fe/monsterType.o /cygdrive/C/Users/tnc02_000/Documents/NetBeansProjects/Lerron/monsterType.cpp
-
-${OBJECTDIR}/_ext/ac8653fe/party.o: /cygdrive/C/Users/tnc02_000/Documents/NetBeansProjects/Lerron/party.cpp 
-	${MKDIR} -p ${OBJECTDIR}/_ext/ac8653fe
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/ac8653fe/party.o /cygdrive/C/Users/tnc02_000/Documents/NetBeansProjects/Lerron/party.cpp
-
-${OBJECTDIR}/_ext/ac8653fe/playerCharacter.o: /cygdrive/C/Users/tnc02_000/Documents/NetBeansProjects/Lerron/playerCharacter.cpp 
-	${MKDIR} -p ${OBJECTDIR}/_ext/ac8653fe
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/ac8653fe/playerCharacter.o /cygdrive/C/Users/tnc02_000/Documents/NetBeansProjects/Lerron/playerCharacter.cpp
-
-${OBJECTDIR}/_ext/ac8653fe/random.o: /cygdrive/C/Users/tnc02_000/Documents/NetBeansProjects/Lerron/random.cpp 
-	${MKDIR} -p ${OBJECTDIR}/_ext/ac8653fe
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/ac8653fe/random.o /cygdrive/C/Users/tnc02_000/Documents/NetBeansProjects/Lerron/random.cpp
-
-${OBJECTDIR}/dungeon.o: dungeon.cpp 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/dungeon.o dungeon.cpp
-
-${OBJECTDIR}/gang.o: gang.cpp 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/gang.o gang.cpp
-
-${OBJECTDIR}/inventory.o: inventory.cpp 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/inventory.o inventory.cpp
-
-${OBJECTDIR}/item.o: item.cpp 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/item.o item.cpp
-
-${OBJECTDIR}/main.o: main.cpp 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
-
-${OBJECTDIR}/monster.o: monster.cpp 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/monster.o monster.cpp
-
-${OBJECTDIR}/room.o: room.cpp 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/room.o room.cpp
-
-${OBJECTDIR}/tile.o: tile.cpp 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/tile.o tile.cpp
+${CND_BUILDDIR}/Release/%.o: nbproject/qt-${CND_CONF}.mk
+	${MAKE} -f nbproject/qt-${CND_CONF}.mk "$@"
 
 # Subprojects
 .build-subprojects:
 
 # Clean Targets
-.clean-conf: ${CLEAN_SUBPROJECTS}
-	${RM} -r ${CND_BUILDDIR}/${CND_CONF}
-	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/lerron.exe
+.clean-conf: ${CLEAN_SUBPROJECTS} nbproject/qt-${CND_CONF}.mk
+	${MAKE} -f nbproject/qt-${CND_CONF}.mk distclean
 
 # Subprojects
 .clean-subprojects:
-
-# Enable dependency checking
-.dep.inc: .depcheck-impl
-
-include .dep.inc

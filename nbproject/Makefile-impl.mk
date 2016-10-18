@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=Lerron
+PROJECTNAME=The Pit and the Spire
 
 # Active Configuration
 DEFAULTCONF=Debug
