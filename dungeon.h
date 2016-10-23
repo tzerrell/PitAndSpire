@@ -30,6 +30,7 @@ public:
     virtual ~dungeon();
     
     tile* getTile(int x, int y, int z); //Gets the tile at global coordinate (x,y,z)
+                                        //returns null if that tile is not in this dungeon
        
     int getWestBound() const { return westBoundary; };
     int getEastBound() const { return eastBoundary; };

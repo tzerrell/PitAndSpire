@@ -25,6 +25,8 @@ bool dungeon::containsCoord(int x, int y, int z) {
 }
 
 tile* dungeon::getTile(int x, int y, int z) {
+    if (!containsCoord(x,y,z)) return nullptr;  //TODO: null pointer format?
+    
     std::size_t width = getWidth();
     std::size_t height = getHeight();
     

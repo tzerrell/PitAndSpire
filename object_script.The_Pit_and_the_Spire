@@ -12,5 +12,6 @@ INPUT(
 ./build/Debug/MinGW_Qt-Windows/random.o
 ./build/Debug/MinGW_Qt-Windows/room.o
 ./build/Debug/MinGW_Qt-Windows/tile.o
+./build/Debug/MinGW_Qt-Windows/world.o
 ./build/Debug/MinGW_Qt-Windows/main.o
 );
