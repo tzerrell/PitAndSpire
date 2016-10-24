@@ -14,7 +14,8 @@
 #ifndef ATTACK_TYPES_H
 #define ATTACK_TYPES_H
 
-enum class attack_types {
+enum class attack_type {
+    ATKT_NO_ATK,
     ATKT_MELEE_WEAP,
     ATKT_MELEE_NATURAL,
     ATKT_RANGED_WEAP,
@@ -26,7 +27,8 @@ enum class attack_types {
     ATKT_VISUAL  //Think medusa's gaze
 };
 
-enum class damage_types {
+enum class damage_type {
+    DMGT_NO_DMG,
     DMGT_IMPACT,
     DMGT_CUT,
     DMGT_STAB,

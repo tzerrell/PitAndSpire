@@ -1,4 +1,5 @@
 INPUT(
+./build/Debug/MinGW_Qt-Windows/attack.o
 ./build/Debug/MinGW_Qt-Windows/cardinal_dir.o
 ./build/Debug/MinGW_Qt-Windows/creature.o
 ./build/Debug/MinGW_Qt-Windows/dungeon.o
@@ -9,6 +10,7 @@ INPUT(
 ./build/Debug/MinGW_Qt-Windows/monsterType.o
 ./build/Debug/MinGW_Qt-Windows/party.o
 ./build/Debug/MinGW_Qt-Windows/playerCharacter.o
+./build/Debug/MinGW_Qt-Windows/primitiveAttack.o
 ./build/Debug/MinGW_Qt-Windows/random.o
 ./build/Debug/MinGW_Qt-Windows/room.o
 ./build/Debug/MinGW_Qt-Windows/tile.o

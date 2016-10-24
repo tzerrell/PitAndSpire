@@ -4,6 +4,7 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <itemPath>C:/Users/tnc02_000/Documents/NetBeansProjects/The Pit and the Spire/attack.h</itemPath>
       <itemPath>C:/Users/tnc02_000/Documents/NetBeansProjects/The Pit and the Spire/attack_types.h</itemPath>
       <itemPath>C:/Users/tnc02_000/Documents/NetBeansProjects/The Pit and the Spire/cardinal_dir.h</itemPath>
       <itemPath>C:/Users/tnc02_000/Documents/NetBeansProjects/The Pit and the Spire/class-declarations.h</itemPath>
@@ -16,6 +17,7 @@
       <itemPath>C:/Users/tnc02_000/Documents/NetBeansProjects/The Pit and the Spire/monsterType.h</itemPath>
       <itemPath>C:/Users/tnc02_000/Documents/NetBeansProjects/The Pit and the Spire/party.h</itemPath>
       <itemPath>C:/Users/tnc02_000/Documents/NetBeansProjects/The Pit and the Spire/playerCharacter.h</itemPath>
+      <itemPath>C:/Users/tnc02_000/Documents/NetBeansProjects/The Pit and the Spire/primitiveAttack.h</itemPath>
       <itemPath>C:/Users/tnc02_000/Documents/NetBeansProjects/The Pit and the Spire/random.h</itemPath>
       <itemPath>C:/Users/tnc02_000/Documents/NetBeansProjects/The Pit and the Spire/room.h</itemPath>
       <itemPath>C:/Users/tnc02_000/Documents/NetBeansProjects/The Pit and the Spire/tile.h</itemPath>
@@ -28,6 +30,7 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>C:/Users/tnc02_000/Documents/NetBeansProjects/The Pit and the Spire/attack.cpp</itemPath>
       <itemPath>C:/Users/tnc02_000/Documents/NetBeansProjects/The Pit and the Spire/cardinal_dir.cpp</itemPath>
       <itemPath>C:/Users/tnc02_000/Documents/NetBeansProjects/The Pit and the Spire/creature.cpp</itemPath>
       <itemPath>C:/Users/tnc02_000/Documents/NetBeansProjects/The Pit and the Spire/dungeon.cpp</itemPath>
@@ -39,6 +42,7 @@
       <itemPath>C:/Users/tnc02_000/Documents/NetBeansProjects/The Pit and the Spire/monsterType.cpp</itemPath>
       <itemPath>C:/Users/tnc02_000/Documents/NetBeansProjects/The Pit and the Spire/party.cpp</itemPath>
       <itemPath>C:/Users/tnc02_000/Documents/NetBeansProjects/The Pit and the Spire/playerCharacter.cpp</itemPath>
+      <itemPath>C:/Users/tnc02_000/Documents/NetBeansProjects/The Pit and the Spire/primitiveAttack.cpp</itemPath>
       <itemPath>C:/Users/tnc02_000/Documents/NetBeansProjects/The Pit and the Spire/random.cpp</itemPath>
       <itemPath>C:/Users/tnc02_000/Documents/NetBeansProjects/The Pit and the Spire/room.cpp</itemPath>
       <itemPath>C:/Users/tnc02_000/Documents/NetBeansProjects/The Pit and the Spire/tile.cpp</itemPath>
@@ -71,7 +75,20 @@
         <modules>core gui widgets opengl</modules>
       </qt>
       <compileType>
+        <ccTool>
+          <standard>11</standard>
+        </ccTool>
       </compileType>
+      <item path="C:/Users/tnc02_000/Documents/NetBeansProjects/The Pit and the Spire/attack.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="C:/Users/tnc02_000/Documents/NetBeansProjects/The Pit and the Spire/attack.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
       <item path="C:/Users/tnc02_000/Documents/NetBeansProjects/The Pit and the Spire/attack_types.h"
             ex="false"
             tool="3"
@@ -178,6 +195,16 @@
             flavor2="0">
       </item>
       <item path="C:/Users/tnc02_000/Documents/NetBeansProjects/The Pit and the Spire/playerCharacter.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="C:/Users/tnc02_000/Documents/NetBeansProjects/The Pit and the Spire/primitiveAttack.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="C:/Users/tnc02_000/Documents/NetBeansProjects/The Pit and the Spire/primitiveAttack.h"
             ex="false"
             tool="3"
             flavor2="0">
@@ -249,6 +276,16 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
+      <item path="C:/Users/tnc02_000/Documents/NetBeansProjects/The Pit and the Spire/attack.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="C:/Users/tnc02_000/Documents/NetBeansProjects/The Pit and the Spire/attack.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
       <item path="C:/Users/tnc02_000/Documents/NetBeansProjects/The Pit and the Spire/attack_types.h"
             ex="false"
             tool="3"
@@ -355,6 +392,16 @@
             flavor2="0">
       </item>
       <item path="C:/Users/tnc02_000/Documents/NetBeansProjects/The Pit and the Spire/playerCharacter.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="C:/Users/tnc02_000/Documents/NetBeansProjects/The Pit and the Spire/primitiveAttack.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="C:/Users/tnc02_000/Documents/NetBeansProjects/The Pit and the Spire/primitiveAttack.h"
             ex="false"
             tool="3"
             flavor2="0">

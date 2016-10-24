@@ -30,17 +30,23 @@ namespace rnd {
     std::uniform_real_distribution<double> atanUnifDist(-pi/2, pi/2);
     std::uniform_real_distribution<double> unitUnifDist(0,1);
 
-    int attack(int acc, int str, int ddg, int res) {
+    int attack(int acc, int dmg_lo, int dmg_hi, int ddg, int hard, int res) {
         double toHitScore = std::atan( accVarScale * (acc - ddg) );
         
         //-1 indicates the attack was a miss
         if (atanUnifDist(gen) > toHitScore) return -1;
         
         //If the attack hits the result should be nonnegative
-        std::uniform_int_distribution<> strDist(0,str);
-        std::uniform_int_distribution<> resDist(0,res);
+        std::uniform_int_distribution<> strDist(dmg_lo, dmg_hi);
+        std::uniform_int_distribution<> resDist(hard, res);
         
         return std::max(strDist(gen) - resDist(gen),0);
+    }
+    
+    int resist(int dmg, int hard, int res) {
+        std::uniform_int_distribution<> resDist(hard, res);
+        
+        return std::max(dmg - resDist(gen),0);
     }
     
     bool check(int skill, int difficulty) {
