@@ -14,7 +14,8 @@
 #ifndef RANDOM_H
 #define RANDOM_H
 
-
+int rnd::attack(int acc, int str, int ddg, int res); //generic attack with both accuracy and strength
+bool rnd::check(int skill, int difficulty); //generic skill check
 
 #endif /* RANDOM_H */
 
