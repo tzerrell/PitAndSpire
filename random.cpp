@@ -54,4 +54,10 @@ namespace rnd {
         if (atanUnifDist(gen) < toSucceedScore) return true;
         return false;
     }
+    
+    int intFromRange(int lo, int hi) {
+        std::uniform_int_distribution<> dist(lo, hi);
+        
+        return dist(gen);
+    }
 }

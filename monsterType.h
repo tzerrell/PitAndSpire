@@ -15,12 +15,22 @@
 #define MONSTERTYPE_H
 
 class monsterType {
+    struct extremes { int lo; int hi; };
 public:
     monsterType();
     monsterType(const monsterType& orig);
     virtual ~monsterType();
+    
+    int generateResilience(damage_type type);
+    int generateHardness(damage_type type);
+    int generateDodge(attack_type type);
+    int generateMaxHP();
 private:
-
+    std::map<damage_type, extremes> resilience;    //max damage that can be resisted
+    std::map<damage_type, extremes> hardness;  //min damage that will be resisted
+    std::map<attack_type, extremes> dodge;     //skill at avoiding attack type
+    
+    extremes maxHP;
 };
 
 #endif /* MONSTERTYPE_H */

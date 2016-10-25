@@ -22,3 +22,18 @@ monsterType::monsterType(const monsterType& orig) {
 monsterType::~monsterType() {
 }
 
+monsterType::generateResilience(damage_type type) {
+    return rnd::intFromRange(resilience[type].lo, resilience[type].hi);
+}
+
+monsterType::generateHardness(damage_type type) {
+    return rnd::intFromRange(hardness[type].lo, hardness[type].hi);
+}
+
+monsterType::generateDodge(attack_type type) {
+    return rnd::intFromRange(dodge[type].lo, dodge[type].hi);
+}
+
+monsterType::generateMaxHP() {
+    return rnd::intFromRange(maxHP.lo, maxHP.hi);
+}

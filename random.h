@@ -18,6 +18,7 @@ namespace rnd {
     int attack(int acc, int dmg_lo, int dmg_hi, int ddg, int hard, int res); //generic attack with both accuracy and strength
     bool check(int skill, int difficulty); //generic skill check
     int resist(int dmg, int hard, int res); //given dmg pre-resist damage, and hardness hard and resilience res against its type, compute actual damage taken
+    int intFromRange(int lo, int hi); //random int in [lo,hi]
 }
 
 #endif /* RANDOM_H */
