@@ -25,12 +25,16 @@ public:
     primitiveAttack(const primitiveAttack& orig);
     virtual ~primitiveAttack();
     
-    bool attack(creature* target, std::stack<primitiveAttack*>* readied);
+    bool attack(creature* source, creature* target, std::stack<primitiveAttack*>* readied);
 private:
     damage_type dmg_t;
     attack_type atk_t;
-    int accuracy;
-    struct {int min; int max;} damage;
+    int (*toHit_func)(creature* src, creature* tgt, attack_type);
+    int (*damage_func)(creature* src, creature* tgt, damage_type);
+    void (*sideEffects_func)(creature* src, creature* tgt);
+    void (*onHitEffects_func)(creature* src, creature* tgt, bool tookDmg);
+    void (*onMissEffects_func)(creature* src, creature* tgt);
+    
     primitiveAttack* followup;
     bool followupOnHit = true;
     bool followupOnMiss = false;

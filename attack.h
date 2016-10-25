@@ -26,7 +26,7 @@ public:
     attack(const attack& orig);
     virtual ~attack();
     
-    void atk(creature* target);
+    void atk(creature* source, creature* target);
 private:
     std::vector<primitiveAttack*> component;
 };

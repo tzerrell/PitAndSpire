@@ -504,10 +504,14 @@ build/Debug/MinGW_Qt-Windows/item.o: item.cpp item.h \
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/Debug/MinGW_Qt-Windows/item.o item.cpp
 
 build/Debug/MinGW_Qt-Windows/monster.o: monster.cpp monster.h \
-		class-declarations.h
+		class-declarations.h \
+		creature.h \
+		attack_types.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/Debug/MinGW_Qt-Windows/monster.o monster.cpp
 
-build/Debug/MinGW_Qt-Windows/monsterType.o: monsterType.cpp monsterType.h
+build/Debug/MinGW_Qt-Windows/monsterType.o: monsterType.cpp monsterType.h \
+		attack_types.h \
+		random.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/Debug/MinGW_Qt-Windows/monsterType.o monsterType.cpp
 
 build/Debug/MinGW_Qt-Windows/party.o: party.cpp party.h \

@@ -14,6 +14,10 @@
 #ifndef MONSTERTYPE_H
 #define MONSTERTYPE_H
 
+#include <map>
+#include "attack_types.h"
+#include "random.h"
+
 class monsterType {
     struct extremes { int lo; int hi; };
 public:

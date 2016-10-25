@@ -28,21 +28,36 @@ primitiveAttack::~primitiveAttack() {
 //target is the creature being attacked
 //readied is the stack of primitiveAttacks which compose the current attack
 // and which have yet to be resolved
-bool primitiveAttack::attack(creature* target, std::stack<primitiveAttack*>* readied) {
-    int dmg = rnd::attack(accuracy, damage.min, damage.max,
-            target->getDodge(atk_t), target->getHardness(dmg_t),
-            target->getResilience(dmg_t));
+bool primitiveAttack::attack(creature* source, creature* target,
+        std::stack<primitiveAttack*>* readied) {
+    if (toHit_func == nullptr) {
+        //TODO: Throw an exception if toHit_func == nullptr
+        //Then treat attack as if it never happened I think
+        return false;
+    }
     
-    if (dmg == -1) {
+    if ((*toHit_func)(source, target, atk_t)) {
         //Missed
-        //TODO: actions on a miss
-        if (followupOnMiss) readied->push(followup);
+        if (onMissEffects_func != nullptr)
+            (*onMissEffects_func)(source, target);
+        if (onMissEffects_func != nullptr)
+            (*sideEffects_func)(source, target);
+        if (followupOnMiss && followup != nullptr) readied->push(followup);
         return false;
     } else {
         //Hit
-        //TODO: actions on a hit
-        target->takeDamage(dmg);
-        if (followupOnHit) readied->push(followup);
+        int dmg; 
+        if (damage_func != nullptr) {
+            dmg = (*damage_func)(source, target, dmg_t);
+            target->takeDamage(dmg);
+        } else {
+            dmg = 0;
+        }
+        if (onHitEffects_func != nullptr)
+            (*onHitEffects_func)(source, target, (dmg!=0));
+        if (sideEffects_func != nullptr)
+            (*sideEffects_func)(source, target);
+        if (followupOnHit && followup != nullptr) readied->push(followup);
         return true;
     }
 }

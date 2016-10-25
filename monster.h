@@ -9,6 +9,9 @@
 #define	MONSTER_H
 
 #include "class-declarations.h"
+#include "creature.h"
+
+class monsterType;
 
 class monster:creature {
 public:

@@ -26,7 +26,7 @@ attack::attack(const attack& orig) {
 attack::~attack() {
 }
 
-void attack::atk(creature* target) {
+void attack::atk(creature* source, creature* target) {
     std::stack<primitiveAttack*> readiedAttacks;
     
     for (auto i = component.rbegin(); i != component.rend(); ++i) {
@@ -38,7 +38,7 @@ void attack::atk(creature* target) {
         //read but primitiveAttack::attack() can push onto this stack
         primitiveAttack* currAtk = readiedAttacks.top();
         readiedAttacks.pop();
-        if (currAtk->attack(target, &readiedAttacks)) {
+        if (currAtk->attack(source, target, &readiedAttacks)) {
             ;   //TODO: Actions on hits (e.g. print message)
         } else {
             ;   //TODO: Actions on misses (e.g. print message)
