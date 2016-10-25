@@ -28,14 +28,15 @@ enum class attack_type {
     ATKT_MELEE_WEAP,
     ATKT_MELEE_NATURAL,
     ATKT_RANGED_WEAP,
-    ATKT_BOLT,   //Think poison spit or magic missile
-    ATKT_BEAM,   //Think laser or lightning bolt
-    ATKT_SMITE,    //Damages target without traveling
+    ATKT_BOLT,  //Think poison spit or magic missile
+    ATKT_BEAM,  //Think laser or lightning bolt
+    ATKT_SMITE, //Damages target without traveling
     ATKT_MENTAL,
     ATKT_VOLUMETRIC, //Think poisonous gas or fireball
     ATKT_VISUAL  //Think medusa's gaze
 };
 
+//When updating this, make sure corresponding EnumTraits entry is also correct
 enum class damage_type {
     DMGT_NO_DMG,
     DMGT_IMPACT,
