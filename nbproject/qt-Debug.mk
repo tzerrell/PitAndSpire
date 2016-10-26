@@ -535,7 +535,8 @@ build/Debug/MinGW_Qt-Windows/primitiveAttack.o: primitiveAttack.cpp primitiveAtt
 		random.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/Debug/MinGW_Qt-Windows/primitiveAttack.o primitiveAttack.cpp
 
-build/Debug/MinGW_Qt-Windows/random.o: random.cpp 
+build/Debug/MinGW_Qt-Windows/random.o: random.cpp creature.h \
+		attack_types.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/Debug/MinGW_Qt-Windows/random.o random.cpp
 
 build/Debug/MinGW_Qt-Windows/room.o: room.cpp room.h \

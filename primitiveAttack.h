@@ -27,10 +27,8 @@ public:
     
     bool attack(creature* source, creature* target, std::stack<primitiveAttack*>* readied);
 private:
-    damage_type dmg_t;
-    attack_type atk_t;
-    int (*toHit_func)(creature* src, creature* tgt, attack_type);
-    int (*damage_func)(creature* src, creature* tgt, damage_type);
+    bool (*hit_func)(creature* src, creature* tgt);
+    int (*damage_func)(creature* src, creature* tgt);
     void (*sideEffects_func)(creature* src, creature* tgt);
     void (*onHitEffects_func)(creature* src, creature* tgt, bool tookDmg);
     void (*onMissEffects_func)(creature* src, creature* tgt);

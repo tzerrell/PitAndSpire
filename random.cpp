@@ -19,6 +19,8 @@
 #include <cmath>
 #include <random>
 
+#include "creature.h"
+
 namespace rnd {
     static constexpr auto pi = acos(-1);
     static constexpr double accVarScale = 1.5;
@@ -59,5 +61,32 @@ namespace rnd {
         std::uniform_int_distribution<> dist(lo, hi);
         
         return dist(gen);
+    }
+    
+    namespace atk {
+        template<attack_type A>
+        bool genericHit(creature* source, creature* target) {
+            //TODO: actual accuracy from source creature rather than this
+            //garbage number
+            int acc = 47;
+            double toHitScore = std::atan(accVarScale * (acc - target->getDodge(A)));
+        
+            if (atanUnifDist(gen) < toHitScore)
+                return true;
+            else
+                return false;
+        }
+        
+        template<damage_type D>
+        int genericDamage(creature* source, creature* target) {
+            //TODO: actual damage from source creature rather than these
+            //garbage numbers
+            int dmgLo = 42; int dmgHi = 47;
+            std::uniform_int_distribution<> strDist(dmgLo, dmgHi);
+            std::uniform_int_distribution<> resDist(target->getHardness(D),
+                    target->getResilience(D));
+        
+        return std::max(strDist(gen) - resDist(gen),0);
+        }
     }
 }
