@@ -11,6 +11,7 @@
 #include <cstddef>
 #include <cstdlib>
 #include <vector>
+#include <ostream>
 #include "class-declarations.h"
 
 // dungeon
@@ -40,6 +41,9 @@ public:
     int getTopBound() const { return topBoundary; };
     
     bool containsCoord(int x, int y, int z); //Checks if global coord (x,y,z) is in this dungeon
+    bool serialize(std::ostream& sout);
+    
+    //TODO: Need comparison operators
 protected:
     std::size_t getLength() const
             { return westBoundary - eastBoundary + 1; };

@@ -36,3 +36,7 @@ tile* dungeon::getTile(int x, int y, int z) {
     
     return tiles[index];
 }
+
+bool dungeon::serialize(std::ostream& sout) {
+    sout << "TODO";
+}

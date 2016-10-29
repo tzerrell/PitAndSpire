@@ -15,6 +15,8 @@
 #define WORLD_H
 
 #include <vector>
+#include <ostream>
+#include <string>
 #include "dungeon.h"
 
 //lists all the dungeons in the world
@@ -26,9 +28,20 @@ public:
     world(const world& orig);
     virtual ~world();
     
-    dungeon* owningDungeon(int x, int y, int z);
+    dungeon* dungeonOwning(int x, int y, int z);    //The dungeon in this world that owns tile (x,y,z)
+    bool serialize(std::ostream& sout, std::string dungPath = std::string(""));
+    
+    bool operator==(const world& rhs) const;
+    bool operator!=(const world& rhs) const;
+    bool operator<(const world& rhs) const;
+    bool operator>(const world& rhs) const;
+    bool operator<=(const world& rhs) const;
+    bool operator>=(const world& rhs) const;
+    
 private:
+    std::string name;   //World names must be distinct to enable world comparison and sorting; they should also be acceptable in file names.
     std::vector<dungeon*> dungeons;
+    
 };
 
 #endif /* WORLD_H */
