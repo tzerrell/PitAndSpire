@@ -48,11 +48,18 @@ bool world::serialize(std::ostream& sout, std::string dungPath) {
         path += name;
         path += "_dung_";
         path += std::to_string(count);
+        path += ".txt"; //TODO: Change extension to a custom one
+        
+        sout << "Dungeon " << count << " at " << (*i)->getWestBound() << "-"
+                << (*i)->getEastBound() << "x" << (*i)->getSouthBound() << "-"
+                << (*i)->getNorthBound() << "x" << (*i)->getBottomBound() << "-"
+                << (*i)->getTopBound() << " in file " << path << '\n';
         
         dout.open(path);
         (*i)->serialize(dout);
         dout.close();
     }
+    sout << "End of dungeons\n"
     //TODO: Anything other than dungeons to serialize?
     //TODO: Catch "exceptions" and return appropriately
 }
