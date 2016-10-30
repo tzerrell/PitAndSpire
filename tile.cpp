@@ -5,6 +5,7 @@
  * Created on August 11, 2016, 7:01 PM
  */
 
+#include <ostream>
 #include "tile.h"
 #include "world.h"
 #include "dungeon.h"
@@ -51,4 +52,11 @@ bool tile::operator==(const tile& rhs) {
 
 bool tile::operator!=(const tile& rhs) {
     return !((*this) == rhs);
+}
+
+bool tile::serialize(std::ostream& sout) {
+    sout << "tile(" << location.x << "," << location.y << "," << location.z
+            << ")" << /*TODO WallDir->Type serialization*/ "" << '\n';
+    //TODO: Anything beyond location & WallDir->Type map to serialize?
+    //TODO: Manage "exceptions" and return appropriately
 }

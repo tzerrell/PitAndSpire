@@ -9,6 +9,7 @@
 #define	TILE_H
 
 #include <map>
+#include <ostream>
 #include "class-declarations.h"
 
 class world;
@@ -28,6 +29,7 @@ public:
     
     bool isPassable(WallDirection dir);     //Can you walk from this tile in dir?
     
+    bool serialize(std::ostream& sout);
     bool operator==(const tile& rhs);
     bool operator!=(const tile& rhs);
 protected:
