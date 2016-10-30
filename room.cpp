@@ -63,7 +63,7 @@ void room::presentGangTo(party* targetParty) {
     targetParty->activeGang = occupants;
 }
 
-bool room::serialize(std::ostream& sout) {
+bool room::serialize(std::ostream& sout) const {
     sout << "tPatS room serialization v1.0.0\n";
     //TODO: Implement
 }

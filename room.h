@@ -24,7 +24,7 @@ public:
     
     void presentGangTo(party*); //Generates a new gang if necessary and makes it
                                 //the party's active gang
-    bool serialize(std::ostream& sout);
+    bool serialize(std::ostream& sout) const;
 private:
     dungeon*    owner;
     inventory*  items;

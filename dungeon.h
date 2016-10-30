@@ -41,7 +41,7 @@ public:
     int getTopBound() const { return topBoundary; };
     
     bool containsCoord(int x, int y, int z); //Checks if global coord (x,y,z) is in this dungeon
-    bool serialize(std::ostream& sout);
+    bool serialize(std::ostream& sout) const;
     
     //TODO: Need comparison operators
 protected:

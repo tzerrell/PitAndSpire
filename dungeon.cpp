@@ -39,7 +39,7 @@ tile* dungeon::getTile(int x, int y, int z) {
     return tiles[index];
 }
 
-bool dungeon::serialize(std::ostream& sout) {
+bool dungeon::serialize(std::ostream& sout) const {
     sout << "tPatS dungeon serialization v1.0.0\n";
     sout << "The dungeon is at " << westBoundary << "-" << eastBoundary 
             << "x" << southBoundary << "-" << northBoundary 
