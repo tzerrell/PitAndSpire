@@ -22,8 +22,8 @@ std::ostream& operator<<(std::ostream& stream, const WallDirection& dir) {
         case WallDirection::WWallDir:
             stream << 'W'; break;
         default:
-            stream << '!';
-            //TODO: throw exception or log error
+            stream.setstate(std::ios_base::failbit);
+            //TODO: Also log error
             break;
     }
     
@@ -32,6 +32,9 @@ std::ostream& operator<<(std::ostream& stream, const WallDirection& dir) {
 
 std::ostream& operator<<(std::ostream& stream, const WallType& type) {
     //TODO: Implement
+    //The implementation of this serialization must not use any of the
+    //characters used in the WallDirection serialization (or else the tile
+    //serialization will need to be changed).
     
     return stream;
 }

@@ -56,8 +56,16 @@ bool tile::operator!=(const tile& rhs) {
 
 bool tile::serialize(std::ostream& sout) const {
     sout << "tile(" << location.x << "," << location.y << "," << location.z
-            << ")" << /*TODO WallDir->Type serialization*/ "" << '\n';
-    //TODO: Anything beyond location & WallDir->Type map to serialize?
+            << ")";
+    for (auto i = wall.begin(); i != wall.end(); ++i) {
+        sout << i->first << i->second;
+    }
+    sout << '.';
+
+    //TODO: Will ultimately need to localize more than location and wall
+    
+    sout << '\n';
+    
     //TODO: Manage "exceptions" and return appropriately
 }
 
