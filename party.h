@@ -21,6 +21,7 @@
 //Forward Declarations
 class gang;
 class room;
+class world;
 
 const int MAX_PARTY_SIZE = 4;
 
@@ -46,6 +47,7 @@ private:
     struct { int x; int y; int z; } coord;
     room* inRoom;
     gang* activeGang;
+    world* inWorld;
     //int currPatrolOffsetTime; //How far in the future the respawn time
                                 //should be; that is, how long is this party's
                                 //patrol effective for (currently). 

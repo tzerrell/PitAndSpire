@@ -11,6 +11,8 @@
 #include <map>
 #include "class-declarations.h"
 
+class world;
+
 enum class WallDirection { NWallDir, EWallDir, SWallDir, WWallDir, 
     DWallDir, UWallDir };
 enum class WallType { /*TODO*/ }; //TODO: might be class? instead of enum
@@ -21,7 +23,7 @@ public:
     tile(const tile& orig);
     virtual ~tile();
     
-    static tile* lookup(int x ,int y ,int z);    //returns the tile at given global coordinates
+    static tile* lookup(int x ,int y ,int z, world* w);    //returns the tile at given global coordinates
     room* getOwner();
     
     bool isPassable(WallDirection dir);     //Can you walk from this tile in dir?

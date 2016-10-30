@@ -6,7 +6,7 @@
  */
 
 #include "tile.h"
-
+#include "world.h"
 #include "dungeon.h"
 #include "cardinal_dir.h"
 
@@ -19,11 +19,9 @@ tile::tile(const tile& orig) {
 tile::~tile() {
 }
 
-tile* tile::lookup(int x, int y, int z) {
-    //TODO: Check global dungeon table to see which dungeon contains this tile
-    //by comparing parameter coordinates to the bounds of each dungeon. Call
-    //this dungeon "dung"
-    dungeon* dung;   //TODO: Won't actually use this line
+tile* tile::lookup(int x, int y, int z, world* w) {
+    dungeon* dung = w->dungeonOwning(x,y,z);
+    if (dung == nullptr) return nullptr;
     
     return dung->getTile(x,y,z);
 }

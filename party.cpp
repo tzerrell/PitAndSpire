@@ -27,7 +27,7 @@ party::~party() {
 
 void party::updateLocation(int newX, int newY, int newZ) {
     //Update room if it's changed
-    room* newRoom = tile::lookup(newX, newY, newZ)->getOwner();
+    room* newRoom = tile::lookup(newX, newY, newZ, inWorld)->getOwner();
     if (*inRoom != *newRoom)
         enter(newRoom);
     
@@ -54,7 +54,7 @@ bool party::advance() {
     //Returns true if the party successfully advanced, false otherwise.
     
     //Check if there is a wall in the way
-    if (!(tile::lookup(coord.x,coord.y,coord.z)->isPassable(dirCast(facing)))) {
+    if (!(tile::lookup(coord.x,coord.y,coord.z,inWorld)->isPassable(dirCast(facing)))) {
         //TODO: Code for trying to advance through impassable wall.
         return false;
     }
@@ -82,11 +82,11 @@ bool party::advance() {
 
 int party::fall() {
     //If there is a floor, don't fall.
-    if (!(tile::lookup(coord.x,coord.y,coord.z)->isPassable(WallDirection::DWallDir))) 
+    if (!(tile::lookup(coord.x,coord.y,coord.z,inWorld)->isPassable(WallDirection::DWallDir))) 
         return 0;
     
     int descentDistance = 0;
-    while (tile::lookup(coord.x,coord.y,coord.z - descentDistance)->isPassable(WallDirection::DWallDir)) {
+    while (tile::lookup(coord.x,coord.y,coord.z - descentDistance,inWorld)->isPassable(WallDirection::DWallDir)) {
         ++descentDistance;
     }
     
