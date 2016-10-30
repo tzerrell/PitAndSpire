@@ -14,7 +14,7 @@
 #ifndef CARDINAL_DIR_H
 #define CARDINAL_DIR_H
 
-#include "tile.h"
+#include "walls.h"
 
 enum class cardinal_dir {
     Dir_E,

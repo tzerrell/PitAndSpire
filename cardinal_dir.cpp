@@ -5,7 +5,7 @@
  */
 
 #include "cardinal_dir.h"
-#include "tile.h"
+#include "walls.h"
 
 WallDirection dirCast(cardinal_dir dir) {
     switch(dir) {

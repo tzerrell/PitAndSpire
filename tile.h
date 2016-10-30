@@ -11,12 +11,9 @@
 #include <map>
 #include <ostream>
 #include "class-declarations.h"
+#include "walls.h"
 
 class world;
-
-enum class WallDirection { NWallDir, EWallDir, SWallDir, WWallDir, 
-    DWallDir, UWallDir };
-enum class WallType { /*TODO*/ }; //TODO: might be class? instead of enum
 
 class tile {
 public:

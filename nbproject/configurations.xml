@@ -21,6 +21,7 @@
       <itemPath>C:/Users/tnc02_000/Documents/NetBeansProjects/The Pit and the Spire/random.h</itemPath>
       <itemPath>C:/Users/tnc02_000/Documents/NetBeansProjects/The Pit and the Spire/room.h</itemPath>
       <itemPath>C:/Users/tnc02_000/Documents/NetBeansProjects/The Pit and the Spire/tile.h</itemPath>
+      <itemPath>C:/Users/tnc02_000/Documents/NetBeansProjects/The Pit and the Spire/walls.h</itemPath>
       <itemPath>C:/Users/tnc02_000/Documents/NetBeansProjects/The Pit and the Spire/world.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
@@ -46,6 +47,7 @@
       <itemPath>C:/Users/tnc02_000/Documents/NetBeansProjects/The Pit and the Spire/random.cpp</itemPath>
       <itemPath>C:/Users/tnc02_000/Documents/NetBeansProjects/The Pit and the Spire/room.cpp</itemPath>
       <itemPath>C:/Users/tnc02_000/Documents/NetBeansProjects/The Pit and the Spire/tile.cpp</itemPath>
+      <itemPath>C:/Users/tnc02_000/Documents/NetBeansProjects/The Pit and the Spire/walls.cpp</itemPath>
       <itemPath>C:/Users/tnc02_000/Documents/NetBeansProjects/The Pit and the Spire/world.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
@@ -235,6 +237,16 @@
             flavor2="0">
       </item>
       <item path="C:/Users/tnc02_000/Documents/NetBeansProjects/The Pit and the Spire/tile.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="C:/Users/tnc02_000/Documents/NetBeansProjects/The Pit and the Spire/walls.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="C:/Users/tnc02_000/Documents/NetBeansProjects/The Pit and the Spire/walls.h"
             ex="false"
             tool="3"
             flavor2="0">
@@ -432,6 +444,16 @@
             flavor2="0">
       </item>
       <item path="C:/Users/tnc02_000/Documents/NetBeansProjects/The Pit and the Spire/tile.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
+      <item path="C:/Users/tnc02_000/Documents/NetBeansProjects/The Pit and the Spire/walls.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="C:/Users/tnc02_000/Documents/NetBeansProjects/The Pit and the Spire/walls.h"
             ex="false"
             tool="3"
             flavor2="0">
