@@ -564,7 +564,7 @@ build/Debug/MinGW_Qt-Windows/tile.o: tile.cpp tile.h \
 		cardinal_dir.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/Debug/MinGW_Qt-Windows/tile.o tile.cpp
 
-build/Debug/MinGW_Qt-Windows/walls.o: walls.cpp 
+build/Debug/MinGW_Qt-Windows/walls.o: walls.cpp walls.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/Debug/MinGW_Qt-Windows/walls.o walls.cpp
 
 build/Debug/MinGW_Qt-Windows/world.o: world.cpp world.h \

@@ -20,6 +20,8 @@ enum class WallDirection { NWallDir, EWallDir, SWallDir, WWallDir,
     DWallDir, UWallDir };
 enum class WallType { /*TODO*/ }; //TODO: might be class? instead of enum
 
+std::ostream& operator<<(std::ostream& stream, const WallDirection& dir);
+std::ostream& operator<<(std::ostream& stream, const WallType& type);
 
 #endif /* WALLS_H */
 
