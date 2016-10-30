@@ -7,6 +7,7 @@
 
 #include "dungeon.h"
 #include "room.h"
+#include "tile.h"
 
 dungeon::dungeon(int WBnd, int EBnd, int SBnd, int NBnd, int BBnd, int TBnd)
         : westBoundary(WBnd), eastBoundary(EBnd), southBoundary(SBnd),

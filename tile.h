@@ -29,9 +29,10 @@ public:
     
     bool isPassable(WallDirection dir);     //Can you walk from this tile in dir?
     
-    bool serialize(std::ostream& sout);
+    bool serialize(std::ostream& sout) const;
     bool operator==(const tile& rhs);
     bool operator!=(const tile& rhs);
+    friend std::ostream& operator<<(std::ostream& stream, const tile& t);
 protected:
     static bool isPassable(WallType wall);
 private:

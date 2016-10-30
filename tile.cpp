@@ -54,9 +54,14 @@ bool tile::operator!=(const tile& rhs) {
     return !((*this) == rhs);
 }
 
-bool tile::serialize(std::ostream& sout) {
+bool tile::serialize(std::ostream& sout) const {
     sout << "tile(" << location.x << "," << location.y << "," << location.z
             << ")" << /*TODO WallDir->Type serialization*/ "" << '\n';
     //TODO: Anything beyond location & WallDir->Type map to serialize?
     //TODO: Manage "exceptions" and return appropriately
+}
+
+std::ostream& operator<<(std::ostream& stream, const tile& t) {
+    t.serialize(stream);
+    return stream;
 }

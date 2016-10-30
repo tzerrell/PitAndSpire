@@ -488,7 +488,9 @@ build/Debug/MinGW_Qt-Windows/creature.o: creature.cpp creature.h \
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/Debug/MinGW_Qt-Windows/creature.o creature.cpp
 
 build/Debug/MinGW_Qt-Windows/dungeon.o: dungeon.cpp dungeon.h \
-		class-declarations.h
+		class-declarations.h \
+		room.h \
+		tile.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/Debug/MinGW_Qt-Windows/dungeon.o dungeon.cpp
 
 build/Debug/MinGW_Qt-Windows/gang.o: gang.cpp gang.h \
@@ -551,6 +553,7 @@ build/Debug/MinGW_Qt-Windows/room.o: room.cpp room.h \
 
 build/Debug/MinGW_Qt-Windows/tile.o: tile.cpp tile.h \
 		class-declarations.h \
+		world.h \
 		dungeon.h \
 		cardinal_dir.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o build/Debug/MinGW_Qt-Windows/tile.o tile.cpp

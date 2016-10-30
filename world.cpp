@@ -59,7 +59,7 @@ bool world::serialize(std::ostream& sout, std::string dungPath) {
         (*i)->serialize(dout);
         dout.close();
     }
-    sout << "End of dungeons\n"
+    sout << "End of dungeons\n";
     //TODO: Anything other than dungeons to serialize?
     //TODO: Catch "exceptions" and return appropriately
 }
