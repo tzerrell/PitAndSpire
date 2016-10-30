@@ -10,6 +10,7 @@
 
 #include "class-declarations.h"
 #include <vector>
+#include <ostream>
 
 class party;
 
@@ -23,6 +24,7 @@ public:
     
     void presentGangTo(party*); //Generates a new gang if necessary and makes it
                                 //the party's active gang
+    bool serialize(std::ostream& sout);
 private:
     dungeon*    owner;
     inventory*  items;

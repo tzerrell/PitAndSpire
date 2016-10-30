@@ -35,7 +35,7 @@ dungeon* world::dungeonOwning(int x, int y, int z) {
 }
 
 bool world::serialize(std::ostream& sout, std::string dungPath) {
-    sout << "tPatS world serialization v1.0\n";
+    sout << "tPatS world serialization v1.0.0\n";
     sout << "The world " << name << " contains " 
             << dungeons.size() << " dungeons.\n";
     

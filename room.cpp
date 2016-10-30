@@ -5,6 +5,7 @@
  * Created on August 11, 2016, 8:33 PM
  */
 
+#include <ostream>
 #include "room.h"
 #include "party.h"
 
@@ -60,4 +61,9 @@ void room::presentGangTo(party* targetParty) {
     //it has been long enough since a party patrolled this room)
     
     targetParty->activeGang = occupants;
+}
+
+bool room::serialize(std::ostream& sout) {
+    sout << "tPatS room serialization v1.0.0\n";
+    //TODO: Implement
 }

@@ -6,6 +6,7 @@
  */
 
 #include "dungeon.h"
+#include "room.h"
 
 dungeon::dungeon(int WBnd, int EBnd, int SBnd, int NBnd, int BBnd, int TBnd)
         : westBoundary(WBnd), eastBoundary(EBnd), southBoundary(SBnd),
@@ -38,5 +39,18 @@ tile* dungeon::getTile(int x, int y, int z) {
 }
 
 bool dungeon::serialize(std::ostream& sout) {
-    sout << "TODO";
+    sout << "tPatS dungeon serialization v1.0.0\n";
+    sout << "The dungeon is at " << westBoundary << "-" << eastBoundary 
+            << "x" << southBoundary << "-" << northBoundary 
+            << "x" << bottomBoundary << "-" << topBoundary << '\n';
+    sout << "The dungeon contains " << tiles.size() << " tiles.\n";
+    for (auto i = tiles.begin(); i != tiles.end(); ++i) {
+        sout << (**i);
+    }
+    sout << "End of tiles\n";
+    sout << "The dungeon contains " << rooms.size() << " rooms.\n";
+    //TODO: Serialize rooms
+    sout << "End of rooms\n";
+    //TODO: Anything other than tiles and rooms to serialize?
+    //TODO: Catch "exceptions" and return appropriately
 }
